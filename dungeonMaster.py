@@ -1,7 +1,8 @@
 import openai
 import config
 import tkinter as tk
-from tkinter import scrolledtext  # for scrollable text field
+from tkinter import scrolledtext
+import tkinter.font as tkFont
 
 
 openai.api_key = config.API_KEY
@@ -26,23 +27,43 @@ window.title("Dungeon Master")
 # Set a minimum window size (width x height)
 window.minsize(400, 300)
 
-# Create a scrollable text display area
-text_area = scrolledtext.ScrolledText(window, wrap=tk.WORD)
-text_area.grid(column=0, row=0, padx=10, pady=10, sticky='nsew')
+# Set background color to a dark gray to resemble dungeon tiles
+window.configure(bg='#2E2E2E')
 
-# Make the text area span the entire window
-window.grid_columnconfigure(0, weight=1)
-window.grid_rowconfigure(0, weight=1)
+# Define a custom font
+custom_font = tkFont.Font(family="Helvetica", size=12)
+
+# Create a frame to hold the text area and the scrollbar
+text_frame = tk.Frame(window)
+text_frame.grid(column=0, row=0, padx=10, pady=10, sticky='nsew')
+
+# Create a scrollable text display area
+text_area = tk.Text(text_frame, wrap=tk.WORD, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+text_area.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+# Create a scrollbar and attach it to text_area
+scrollbar = tk.Scrollbar(text_frame, command=text_area.yview)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+text_area['yscrollcommand'] = scrollbar.set
 
 # Create a multi-line text input field
-input_field = tk.Text(window, width=40, height=4)
+input_field = tk.Text(window, width=40, height=4, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
 input_field.grid(column=0, row=1, padx=10, pady=10, sticky='w')
+
+# Create a Submit button
+submit_button = tk.Button(window, text="Submit", command=lambda: handle_entry(None), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+submit_button.grid(column=0, row=2, padx=10, pady=10, sticky='w')
+
+# Define text tags for coloring
+text_area.tag_config('player_tag', foreground='green')
+text_area.tag_config('dm_tag', foreground='yellow')
 
 # Function to handle text entry
 def handle_entry(event):
     user_text = input_field.get("1.0", tk.END).strip()  # Get text from input_field
     input_field.delete("1.0", tk.END)  # Clear the input_field
-    text_area.insert(tk.END, f"Player: {user_text}\n")
+    text_area.insert(tk.END, "Player: ", 'player_tag')  # colored "Player:"
+    text_area.insert(tk.END, f"{user_text}\n\n")  # user's message
     
     # Add the user's message to the messages list
     messages.append({"role": "user", "content": user_text})
@@ -58,14 +79,16 @@ def handle_entry(event):
     dm_response = chat.choices[0].message.content
     
     # Display the DM's reply in the text area
-    text_area.insert(tk.END, f"DM: {dm_response}\n")
+    text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+    text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
+    
+    # After inserting new text, set the text area's view to the end of the text
+    text_area.see(tk.END)
     
     # Add the DM's reply to the messages list
     messages.append({"role": "assistant", "content": dm_response})
 
 # Bind the Enter key to the handle_entry function
-# Note: You may want to create a "Submit" button or use a different event binding,
-# as the Enter key will create a new line in the Text widget by default.
 input_field.bind("<Return>", handle_entry)
 
 # Run the Tkinter event loop
