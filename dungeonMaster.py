@@ -1,5 +1,5 @@
 import openai
-import config
+import Config
 import tkinter as tk
 from tkinter import scrolledtext
 from tkinter import ttk
@@ -7,11 +7,13 @@ import tkinter.font as tkFont
 import tkinter.messagebox as messagebox 
 import pyttsx3
 import threading
+from CharacterManager import CharacterManager
 
 
 
 
-openai.api_key = config.API_KEY
+
+openai.api_key = Config.API_KEY
 
 messages = [ {"role": "system", "content": 
 			"You are the greatest dungeon master of all time."
@@ -195,9 +197,13 @@ def create_or_open_character_sheet(player_index):
     # Create a Save button with a command to save the character data
     save_button = tk.Button(character_sheet_window, text="Save", command=lambda: save_character(player_index, entries, notes_text) if validate_entries(entries) else None)
     save_button.pack()
+    
+# Create an instance of CharacterManager
+CharacterManager = CharacterManager()
 
+# Use the instance to create or open character sheets
 for i in range(6):
-    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: CharacterManager.create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
     button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
 
 # Run the Tkinter event loop
