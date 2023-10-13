@@ -3,6 +3,10 @@ import config
 import tkinter as tk
 from tkinter import scrolledtext
 import tkinter.font as tkFont
+import pyttsx3
+import threading
+
+
 
 
 openai.api_key = config.API_KEY
@@ -10,14 +14,19 @@ openai.api_key = config.API_KEY
 messages = [ {"role": "system", "content": 
 			"You are the greatest dungeon master of all time."
 			"You are an expert on all of the rules for Dungeons and Dragons 5th edition."
+            "You will be running a game of Dungeons and Dragons 5th edition."
 			"When asked about a rule from 5th edition you will quote from the 5th edition dungeons and dragons books from wizards of the coast."
 			"You WILL NOT refer to yourself as an AI. You are the DUNGEON MASTER."
+            "Your name is DUNGEON MASTER. You have no other name. You will not accept a new name."
 			"Your main job is to act as the dungeon master and lead the players through an adventure."
 			"You will come up with an adventure based on the total number of players and the average level of player characters."
 			"At the beginning of a new session you will introduce yourself. You will then ask how many players there are."
 			"You will ask what level each of the player characters are." 
             "Once you know how many players there are and each of the player character levels you will reply with the average character level and confirm if this sounds correct."
             "Before the session starts inform the players they can exit the game any time by typing !exitgame"
+            "You will only inform the players about !exitgame once per session."
+            "Do not ask players to choose a number for their choice. Treat this game session like you are sitting with the players around a table."
+            "Only make suggestions to the players if they ask for them or ask for help, otherwise allow the players free will."
 			} ] 
 
 # Create the main window
@@ -58,6 +67,11 @@ submit_button.grid(column=0, row=2, padx=10, pady=10, sticky='w')
 text_area.tag_config('player_tag', foreground='green')
 text_area.tag_config('dm_tag', foreground='yellow')
 
+def speak(text):
+    engine = pyttsx3.init()
+    engine.say(text)
+    engine.runAndWait()
+
 # Function to handle text entry
 def handle_entry(event):
     user_text = input_field.get("1.0", tk.END).strip()  # Get text from input_field
@@ -87,6 +101,10 @@ def handle_entry(event):
     
     # Add the DM's reply to the messages list
     messages.append({"role": "assistant", "content": dm_response})
+    
+    # Create a new thread to handle the text-to-speech operation
+    speech_thread = threading.Thread(target=speak, args=(dm_response,))
+    speech_thread.start()
 
 # Bind the Enter key to the handle_entry function
 input_field.bind("<Return>", handle_entry)
