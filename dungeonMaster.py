@@ -20,8 +20,10 @@ messages = [ {"role": "system", "content":
             "Your name is DUNGEON MASTER. You have no other name. You will not accept a new name."
 			"Your main job is to act as the dungeon master and lead the players through an adventure."
 			"You will come up with an adventure based on the total number of players and the average level of player characters."
-			"At the beginning of a new session you will introduce yourself. You will then ask how many players there are."
-			"You will ask what level each of the player characters are." 
+			"At the beginning of a new session you will introduce yourself. You will then ask how many players there are." 
+            "You will inform them that a max of 6 players is allowed. You will inform the players that at least 1 player is needed to start the adventure."
+			"You will refuse to start the adventure if there are more than 6 players."
+            "You will ask what level each of the player characters are." 
             "Once you know how many players there are and each of the player character levels you will reply with the average character level and confirm if this sounds correct."
             "Before the session starts inform the players they can exit the game any time by typing !exitgame"
             "You will only inform the players about !exitgame once per session."
@@ -108,6 +110,60 @@ def handle_entry(event):
 
 # Bind the Enter key to the handle_entry function
 input_field.bind("<Return>", handle_entry)
+
+# Character
+character_data = {}
+
+
+def open_character_sheet(player_index):
+    char_window = tk.Toplevel(window)
+    char_window.title(f"Player {player_index + 1} Character Sheet")
+    char_window.configure(bg='#2E2E2E')
+
+    # Create labels and entry fields for character details
+    labels = ['Name:', 'Race:', 'Class:', 'Level:']
+    entries = []
+    for i, label_text in enumerate(labels):
+        label = tk.Label(char_window, text=label_text, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+        label.grid(row=i, column=0, padx=10, pady=5, sticky='w')
+        entry = tk.Entry(char_window, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+        entry.grid(row=i, column=1, padx=10, pady=5, sticky='w')
+        entries.append(entry)
+
+    # Create a text area for additional notes
+    notes_label = tk.Label(char_window, text="Notes:", bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    notes_label.grid(row=len(labels), column=0, padx=10, pady=5, sticky='nw')
+    notes_text = tk.Text(char_window, width=30, height=10, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    notes_text.grid(row=len(labels), column=1, padx=10, pady=5, sticky='w')
+    
+    # Populate the entry fields with the saved character details, if available
+    if player_index in character_data:
+        entries[0].insert(0, character_data[player_index].get('Name', ''))
+        entries[1].insert(0, character_data[player_index].get('Race', ''))
+        entries[2].insert(0, character_data[player_index].get('Class', ''))
+        entries[3].insert(0, character_data[player_index].get('Level', ''))
+        notes_text.insert(tk.END, character_data[player_index].get('Notes', ''))
+
+    # Optionally, save button to save the character details
+    save_button = tk.Button(char_window, text="Save", command=lambda: save_character(player_index, entries, notes_text), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    save_button.grid(row=len(labels) + 1, column=0, columnspan=2, pady=10)
+
+def save_character(player_index, entries, notes_text):
+    # Create a dictionary to hold the character details
+    char_details = {
+        'Name': entries[0].get(),
+        'Race': entries[1].get(),
+        'Class': entries[2].get(),
+        'Level': entries[3].get(),
+        'Notes': notes_text.get("1.0", tk.END).strip()
+    }
+    # Save the character details to the character_data dictionary
+    character_data[player_index] = char_details
+
+# Create buttons for each player
+for i in range(6):
+    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
 
 # Run the Tkinter event loop
 window.mainloop()
