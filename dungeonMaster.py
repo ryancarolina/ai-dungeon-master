@@ -2,7 +2,9 @@ import openai
 import config
 import tkinter as tk
 from tkinter import scrolledtext
+from tkinter import ttk
 import tkinter.font as tkFont
+import tkinter.messagebox as messagebox 
 import pyttsx3
 import threading
 
@@ -114,55 +116,88 @@ input_field.bind("<Return>", handle_entry)
 # Character
 character_data = {}
 
-
-def open_character_sheet(player_index):
-    char_window = tk.Toplevel(window)
-    char_window.title(f"Player {player_index + 1} Character Sheet")
-    char_window.configure(bg='#2E2E2E')
-
-    # Create labels and entry fields for character details
-    labels = ['Name:', 'Race:', 'Class:', 'Level:']
-    entries = []
-    for i, label_text in enumerate(labels):
-        label = tk.Label(char_window, text=label_text, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
-        label.grid(row=i, column=0, padx=10, pady=5, sticky='w')
-        entry = tk.Entry(char_window, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
-        entry.grid(row=i, column=1, padx=10, pady=5, sticky='w')
-        entries.append(entry)
-
-    # Create a text area for additional notes
-    notes_label = tk.Label(char_window, text="Notes:", bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
-    notes_label.grid(row=len(labels), column=0, padx=10, pady=5, sticky='nw')
-    notes_text = tk.Text(char_window, width=30, height=10, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
-    notes_text.grid(row=len(labels), column=1, padx=10, pady=5, sticky='w')
-    
-    # Populate the entry fields with the saved character details, if available
-    if player_index in character_data:
-        entries[0].insert(0, character_data[player_index].get('Name', ''))
-        entries[1].insert(0, character_data[player_index].get('Race', ''))
-        entries[2].insert(0, character_data[player_index].get('Class', ''))
-        entries[3].insert(0, character_data[player_index].get('Level', ''))
-        notes_text.insert(tk.END, character_data[player_index].get('Notes', ''))
-
-    # Optionally, save button to save the character details
-    save_button = tk.Button(char_window, text="Save", command=lambda: save_character(player_index, entries, notes_text), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
-    save_button.grid(row=len(labels) + 1, column=0, columnspan=2, pady=10)
+def validate_entries(entries):  
+    for entry in entries[3:]:  # Assuming entries from index 3 to the end need to be numeric
+        value = entry.get()
+        if not value.isdigit():
+            return False  # Return False if any entry is not a digit
+    return True  # Return True if all entries are digits
 
 def save_character(player_index, entries, notes_text):
-    # Create a dictionary to hold the character details
+    print(f"Saving character {player_index}")  # Debug output
     char_details = {
         'Name': entries[0].get(),
         'Race': entries[1].get(),
         'Class': entries[2].get(),
         'Level': entries[3].get(),
+        'AC': entries[4].get(),
+        'HP': entries[5].get(),
+        'Strength': entries[6].get(),
+        'Dexterity': entries[7].get(),
+        'Constitution': entries[8].get(),
+        'Intelligence': entries[9].get(),
+        'Wisdom': entries[10].get(),
+        'Charisma': entries[11].get(),
         'Notes': notes_text.get("1.0", tk.END).strip()
     }
-    # Save the character details to the character_data dictionary
+    print(f"Char details: {char_details}")  # Debug output
     character_data[player_index] = char_details
+    
+def save_command(player_index, entries, notes_text):
+    if validate_entries(entries):
+        save_character(player_index, entries, notes_text)
+    else:
+        messagebox.showerror("Invalid Input", "Please enter valid numbers for Level, AC, HP, and ability scores.")
 
-# Create buttons for each player
+def create_or_open_character_sheet(player_index):
+    # Creating a new window for the character sheet
+    character_sheet_window = tk.Toplevel()
+    character_sheet_window.title(f"Character Sheet {player_index + 1}")
+
+    # Create a notebook (tabbed layout)
+    notebook = ttk.Notebook(character_sheet_window)
+    notebook.pack(fill=tk.BOTH, expand=True)
+
+    # Create a frame for the first tab (Core Stats)
+    core_stats_frame = ttk.Frame(notebook)
+    notebook.add(core_stats_frame, text="Core Stats")
+
+    # Adding labels and entry fields for core stats in Core Stats tab
+    core_stats_labels_text = ["Name", "Race", "Class", "Level", "AC", "HP", "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]
+    entries = []
+    for i, text in enumerate(core_stats_labels_text):
+        tk.Label(core_stats_frame, text=f"{text}:").grid(row=i, column=0, sticky='e')
+        entry = tk.Entry(core_stats_frame)
+        entry.grid(row=i, column=1)
+        entries.append(entry)  # Keep track of entry fields for later use
+
+    # Create a frame for the second tab (Skills)
+    skills_frame = ttk.Frame(notebook)
+    notebook.add(skills_frame, text="Skills")
+
+    # ... create labels and entry fields for all skills as you had in create_character_sheet
+
+    # Define notes_text here before using it
+    notes_text = tk.Text(character_sheet_window, width=40, height=10)
+    notes_text.pack()
+
+    # If character data exists for this player, populate the fields
+    if player_index in character_data:
+        for i, key in enumerate(['Name', 'Race', 'Class', 'Level', 'AC', 'HP', 'Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']):
+            # Assuming you have entries list defined to hold Entry widgets, and they are in the same order as the keys
+            entries[i].insert(0, character_data[player_index].get(key, ''))
+
+        # New code to populate notes_text with saved notes
+        saved_notes = character_data[player_index].get('Notes', '')
+        notes_text.delete("1.0", tk.END)  # Clear any existing text
+        notes_text.insert("1.0", saved_notes)  # Insert saved notes
+
+    # Create a Save button with a command to save the character data
+    save_button = tk.Button(character_sheet_window, text="Save", command=lambda: save_character(player_index, entries, notes_text) if validate_entries(entries) else None)
+    save_button.pack()
+
 for i in range(6):
-    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
     button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
 
 # Run the Tkinter event loop
