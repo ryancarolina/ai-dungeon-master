@@ -98,45 +98,37 @@ def handle_entry(event):
         formatted_summary = f"Characters Summary: {summary_data}"
         simple_session_manager.add_system_message({"role": "system", "content": formatted_summary})
         simple_session_manager.add_milestone()
-        
+
         # Acknowledge the summary command without contacting the AI DM
         acknowledgment = "Summary data updated."
         text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
         text_area.insert(tk.END, f"{acknowledgment}\n\n")  # acknowledgment message
+        return  # Exit early as no further processing is needed
     else:
         # Get only the relevant messages since the last milestone
         relevant_messages = simple_session_manager.get_messages_since_last_milestone()
 
-
-        # Now get the DM's response using your existing logic, using relevant_messages instead of messages
         if relevant_messages:
             try:
-                chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=relevant_messages)
+                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages)
+                dm_response = chat.choices[0].message.content
+
+                if "_____________________" in dm_response:  # or any other identifier for ASCII art
+                    dm_response = "[SKIP_TTS]" + dm_response
+
+                simple_session_manager.add_message({"role": "assistant", "content": dm_response})
+
+                text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+                text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
+
+                text_area.see(tk.END)
+                speech_queue.put(dm_response)
+
             except Exception as e:
                 text_area.insert(tk.END, f"An error occurred: {e}\n")
-                return  # exit the function early if there's an error
-
-            # Extract the DM's reply from the chat object
-            dm_response = chat.choices[0].message.content
-            
-            # Check if the DM's reply contains ASCII art and tag it if it does
-        if "_____________________" in dm_response:  # or any other identifier for ASCII art
-            dm_response = "[SKIP_TTS]" + dm_response
-
-            # Save the DM's reply to the session data
-            simple_session_manager.add_message({"role": "assistant", "content": dm_response})  # <-- Added line
-
-            # Display the DM's reply in the text area
-            text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
-            text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
-
-            # After inserting new text, set the text area's view to the end of the text
-            text_area.see(tk.END)
-
-            # Add the DM's reply to the queue for text-to-speech
-            speech_queue.put(dm_response)
         else:
-            text_area.insert(tk.END, f"No messages to process.\n")
+            text_area.insert(tk.END, "No messages to process.\n")
+
 
 # Bind the Enter key to the handle_entry function
 input_field.bind("<Return>", handle_entry)
