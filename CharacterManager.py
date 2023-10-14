@@ -1,3 +1,5 @@
+import json
+import os
 import tkinter as tk
 from tkinter import ttk
 import tkinter.messagebox as messagebox
@@ -14,15 +16,36 @@ class CharacterManager:
     
     def __init__(self):
         self.character_data = {}
+        self.load_character_data()
+        
+    def save_character_data(self):
+        try:
+            with open('character_data.json', 'w') as file:
+                json.dump(self.character_data, file, indent=4)
+            print("Data saved successfully")  # Debugging line
+            print(os.path.abspath('character_data.json'))
+        except Exception as e:
+            print(f"Error saving character data: {e}")
+
+    def load_character_data(self):
+        try:
+            if os.path.exists('character_data.json'):
+                with open('character_data.json', 'r') as file:
+                    self.character_data = json.load(file)
+                print(f"Data loaded successfully: {self.character_data}")  # Debugging line
+                print(os.path.abspath('character_data.json'))
+        except Exception as e:
+            print(f"Error loading character_data: {e}")
 
     def validate_entries(self, entries):
         for entry in entries[3:]:
             value = entry.get()
             if not value.isdigit():
+                print(f"Invalid value: {value}")  # Debugging line
                 return False
         return True
 
-    def save_character(self, player_index, entries, notes_text):
+    def save_character(self, player_index, entries, skills_entries, notes_text):
         char_details = {
             'Name': entries[0].get(),
             'Race': entries[1].get(),
@@ -36,12 +59,19 @@ class CharacterManager:
             'Intelligence': entries[9].get(),
             'Wisdom': entries[10].get(),
             'Charisma': entries[11].get(),
-            'Skills': {skill_label: entry.get() for skill_label, entry in zip(self.skills_labels_text, self.skills_entries)},
+            'Skills': {skill_label: entry.get() for skill_label, entry in zip(self.skills_labels_text, skills_entries)},
             'Notes': notes_text.get("1.0", tk.END).strip()
         }
-        self.character_data[player_index] = char_details
+        print(f"Saving data for player {player_index}: {char_details}")  # Debugging line
+        self.character_data[str(player_index)] = char_details
+        self.save_character_data()
 
     def create_or_open_character_sheet(self, player_index):
+        self.load_character_data()        
+
+        # Convert player_index to string for consistency with JSON data
+        player_index_str = str(player_index)
+
         character_sheet_window = tk.Toplevel()
         character_sheet_window.title(f"Character Sheet {player_index + 1}")
 
@@ -62,28 +92,37 @@ class CharacterManager:
         skills_frame = ttk.Frame(notebook)
         notebook.add(skills_frame, text="Skills")
 
-        self.skills_entries = []  # List to hold Entry widgets for skills
-
+        skills_entries = []  # Local variable to hold Entry widgets for skills
         for i, text in enumerate(self.skills_labels_text):
             tk.Label(skills_frame, text=f"{text}:").grid(row=i, column=0, sticky='e')
             entry = tk.Entry(skills_frame)
             entry.grid(row=i, column=1)
-            self.skills_entries.append(entry)  # Keep track of entry fields for later use
+            skills_entries.append(entry)  # Keep track of entry fields for later use
 
         notes_text = tk.Text(character_sheet_window, width=40, height=10)
         notes_text.pack()
-        # If character data exists for this player, populate the fields
-        if player_index in self.character_data:
+
+        # Use player_index_str when checking if it's a key in self.character_data
+        if player_index_str in self.character_data:
             for i, key in enumerate(core_stats_labels_text):
-                entries[i].insert(0, self.character_data[player_index].get(key, ''))
-            saved_notes = self.character_data[player_index].get('Notes', '')
+                entries[i].insert(0, self.character_data[player_index_str].get(key, ''))
+            saved_notes = self.character_data[player_index_str].get('Notes', '')
             notes_text.delete("1.0", tk.END)
             notes_text.insert("1.0", saved_notes)
             
-            # Populate skill fields
-            skills_data = self.character_data[player_index].get('Skills', {})
+            # Also use player_index_str when accessing data in self.character_data
+            skills_data = self.character_data[player_index_str].get('Skills', {})
             for i, skill_label in enumerate(self.skills_labels_text):
-                self.skills_entries[i].insert(0, skills_data.get(skill_label, ''))
+                skills_entries[i].insert(0, skills_data.get(skill_label, ''))
 
-        save_button = tk.Button(character_sheet_window, text="Save", command=lambda: self.save_character(player_index, entries, notes_text) if self.validate_entries(entries) else messagebox.showerror("Invalid Input", "Please enter valid numbers for Level, AC, HP, and ability scores."))
+        save_button = tk.Button(character_sheet_window, text="Save", command=lambda: self.save_character(player_index, entries, skills_entries, notes_text) if self.validate_entries(entries) else messagebox.showerror("Invalid Input", "Please enter valid numbers for Level, AC, HP, and ability scores."))
         save_button.pack()
+        
+    def get_summary_data(self):
+        self.load_character_data()    
+        summary = {}
+        for player_index, char_data in self.character_data.items():
+            # Convert player_index to int, then add 1, and finally convert it back to str for concatenation
+            summary[f"Player {str(int(player_index) + 1)}"] = char_data
+        return summary
+

@@ -1,39 +1,24 @@
 import openai
 import Config
 import tkinter as tk
-from tkinter import scrolledtext
-from tkinter import ttk
 import tkinter.font as tkFont
 import tkinter.messagebox as messagebox 
 import pyttsx3
 import threading
+import queue
 from CharacterManager import CharacterManager
+from SimpleSessionManager import SimpleSessionManager
+
 
 
 
 
 
 openai.api_key = Config.API_KEY
-
-messages = [ {"role": "system", "content": 
-			"You are the greatest dungeon master of all time."
-			"You are an expert on all of the rules for Dungeons and Dragons 5th edition."
-            "You will be running a game of Dungeons and Dragons 5th edition."
-			"When asked about a rule from 5th edition you will quote from the 5th edition dungeons and dragons books from wizards of the coast."
-			"You WILL NOT refer to yourself as an AI. You are the DUNGEON MASTER."
-            "Your name is DUNGEON MASTER. You have no other name. You will not accept a new name."
-			"Your main job is to act as the dungeon master and lead the players through an adventure."
-			"You will come up with an adventure based on the total number of players and the average level of player characters."
-			"At the beginning of a new session you will introduce yourself. You will then ask how many players there are." 
-            "You will inform them that a max of 6 players is allowed. You will inform the players that at least 1 player is needed to start the adventure."
-			"You will refuse to start the adventure if there are more than 6 players."
-            "You will ask what level each of the player characters are." 
-            "Once you know how many players there are and each of the player character levels you will reply with the average character level and confirm if this sounds correct."
-            "Before the session starts inform the players they can exit the game any time by typing !exitgame"
-            "You will only inform the players about !exitgame once per session."
-            "Do not ask players to choose a number for their choice. Treat this game session like you are sitting with the players around a table."
-            "Only make suggestions to the players if they ask for them or ask for help, otherwise allow the players free will."
-			} ] 
+character_manager = CharacterManager()
+simple_session_manager = SimpleSessionManager()
+speech_queue = queue.Queue()
+engine = pyttsx3.init()
 
 # Create the main window
 window = tk.Tk()
@@ -73,10 +58,16 @@ submit_button.grid(column=0, row=2, padx=10, pady=10, sticky='w')
 text_area.tag_config('player_tag', foreground='green')
 text_area.tag_config('dm_tag', foreground='yellow')
 
-def speak(text):
-    engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
+def speak():
+    while True:
+        text = speech_queue.get()  # Get text from the queue
+        if text == "STOP":
+            break  # Exit the loop if the text is "STOP"
+        engine.say(text)
+        engine.runAndWait()
+        
+speech_thread = threading.Thread(target=speak)
+speech_thread.start()
 
 # Function to handle text entry
 def handle_entry(event):
@@ -84,44 +75,76 @@ def handle_entry(event):
     input_field.delete("1.0", tk.END)  # Clear the input_field
     text_area.insert(tk.END, "Player: ", 'player_tag')  # colored "Player:"
     text_area.insert(tk.END, f"{user_text}\n\n")  # user's message
-    
-    # Add the user's message to the messages list
-    messages.append({"role": "user", "content": user_text})
-    
-    # Now get the DM's response using your existing logic
-    try:
-        chat = openai.ChatCompletion.create(model="gpt-4", messages=messages)
-    except Exception as e:
-        text_area.insert(tk.END, f"An error occurred: {e}\n")
-        return  # exit the function early if there's an error
-    
-    # Extract the DM's reply from the chat object
-    dm_response = chat.choices[0].message.content
-    
-    # Display the DM's reply in the text area
-    text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
-    text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
-    
-    # After inserting new text, set the text area's view to the end of the text
-    text_area.see(tk.END)
-    
-    # Add the DM's reply to the messages list
-    messages.append({"role": "assistant", "content": dm_response})
-    
-    # Create a new thread to handle the text-to-speech operation
-    speech_thread = threading.Thread(target=speak, args=(dm_response,))
-    speech_thread.start()
+
+    if not simple_session_manager.session_exists():
+        simple_session_manager.start_session()
+        simple_session_manager.add_milestone()
+
+    if user_text == '!clearsession':
+        simple_session_manager.clear_session()
+        simple_session_manager.start_session()  # Start a new session immediately
+        acknowledgment = "Session cleared. New session started."
+        text_area.insert(tk.END, "DM: ", 'dm_tag')
+        text_area.insert(tk.END, f"{acknowledgment}\n\n")
+        return  # Exit early as there's no further processing needed
+
+    # Add the user's message to the session data
+    simple_session_manager.add_message({"role": "user", "content": user_text})
+
+    if user_text == '!summary':
+        summary_data = character_manager.get_summary_data()
+        formatted_summary = f"Characters Summary: {summary_data}"
+        simple_session_manager.add_system_message({"role": "system", "content": formatted_summary})
+        simple_session_manager.add_milestone()
+        
+        # Acknowledge the summary command without contacting the AI DM
+        acknowledgment = "Summary data updated."
+        text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+        text_area.insert(tk.END, f"{acknowledgment}\n\n")  # acknowledgment message
+    else:
+        # Get only the relevant messages since the last milestone
+        relevant_messages = simple_session_manager.get_messages_since_last_milestone()
+
+
+        # Now get the DM's response using your existing logic, using relevant_messages instead of messages
+        if relevant_messages:
+            try:
+                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages)
+            except Exception as e:
+                text_area.insert(tk.END, f"An error occurred: {e}\n")
+                return  # exit the function early if there's an error
+
+            # Extract the DM's reply from the chat object
+            dm_response = chat.choices[0].message.content
+
+            # Save the DM's reply to the session data
+            simple_session_manager.add_message({"role": "assistant", "content": dm_response})  # <-- Added line
+
+            # Display the DM's reply in the text area
+            text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+            text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
+
+            # After inserting new text, set the text area's view to the end of the text
+            text_area.see(tk.END)
+
+            # Add the DM's reply to the queue for text-to-speech
+            speech_queue.put(dm_response)
+        else:
+            text_area.insert(tk.END, f"No messages to process.\n")
 
 # Bind the Enter key to the handle_entry function
 input_field.bind("<Return>", handle_entry)
-    
-# Create an instance of CharacterManager
-CharacterManager = CharacterManager()
 
 # Use the instance to create or open character sheets
 for i in range(6):
-    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: CharacterManager.create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
+    button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: character_manager.create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
     button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
+    
+def on_closing():
+    speech_queue.put("STOP")  # Add "STOP" to the queue to exit the text-to-speech loop
+    window.destroy()  # Destroy the Tkinter window
+
+window.protocol("WM_DELETE_WINDOW", on_closing)  # Set the on_closing function to be called when the window is closed
 
 # Run the Tkinter event loop
 window.mainloop()
