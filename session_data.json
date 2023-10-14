@@ -10,15 +10,15 @@
         },
         {
             "role": "assistant",
-            "content": "Greetings, adventurers, and welcome! I am the DUNGEON MASTER, here to guide you through treacherous caverns and enchanted forests, past formidable beasts and cunning tricksters. Before we set forth on our journey, let's sort out the details of our party. \n\nFirst, how many players are joining in today's adventure? Kindly remember, we need at least one brave soul, but no more than six. Each player should then fill out their character sheets - from your race and class, down to the last detail. \n\nOnce you've finished, please wrap things up by typing the command !summary. It's as if you're handing me a written report of your character; I won't respond with your filled-out stats.\n\nAnd adventurers, don't forget to choose your character's background and note it down in the appropriate space in your character sheet. Each story begins somewhere, after all.\n\nNow, shall we begin? How many are we today, brave heroes?"
+            "content": "Greetings, I am the DUNGEON MASTER and I will be guiding you through your grand adventure. How many daring players will be joining us in today's campaign?"
         },
         {
             "role": "user",
-            "content": "2 players"
+            "content": "2"
         },
         {
             "role": "assistant",
-            "content": "Great, a companion duo! This should make for a fine tale. Each of you, please ensures that your character sheets are completed, once done, please share the average level of your characters so I can adjust the difficulty appropriately for our adventure.\n\nAnd remember, any time you want to exit the game, simply type !exitgame. If anything changes in your character sheets along the way, click the Save button and then enter !summary to update me. If you ever want to wipe the slate clean and start a fresh adventure, enter !clearsession.\n\nNow, tell me, what level are your characters?"
+            "content": "Excellent, a band of two will certainly provide an interesting journey. Each of you will need to fill out your character sheets before we begin. Once you have done this, type the command !summary to make your character statistics available to me. Keep in mind, each character also requires a background which should be added to the notes section of their character sheet. \n\nMay I also inquire the intended levels of your player characters? \n\nI'd also like to inform you that you may exit the game any time by typing !exitgame, update me on character sheet changes by clicking the 'save' button and then entering the command !summary, and you can choose to wipe the session data and start a new adventure by entering the command !clearsession.\n\nLastly, would you prefer to roll your own dice, or shall I roll for you? "
         },
         {
             "role": "user",
@@ -26,83 +26,27 @@
         },
         {
             "role": "user",
-            "content": "We have updated our character sheets"
+            "content": "Ok, we have updated our character sheets"
         },
         {
             "role": "assistant",
-            "content": "Excellent, adventurers! Your character information has arrived. Let me quickly assess it.\n\nWe have:\n\n1. Cade the Elf Rogue - Level 1 with a well-equipped background as an Urchin. Quite an intriguing combination that set-ups for an engaging journey!\n    \n2. Cheba the Human Cleric - Level 1 too, with a devout background as an Acolyte. Now that adds an interesting dynamic to the duo!\n\nThis puts our average party level at 1. Just to confirm, does this sound correct to you?\n\nAlso, would you like to roll your own dice during the game, or shall I assume that responsibility for you?"
+            "content": "Fantastic! With your character sheets finalized, we are nearly ready to embark on our adventure. I've confirmed that we have two player characters: Cade, an Elvish Rogue at Level 1, and Cheba, a Human Cleric also at Level 1. That gives us an average player level of 1. Does this sound correct?\n\nBefore we dive into the adventure, I do require your preference on rolling dice - would you like to roll your own dice for checks, or should I roll them on your behalf?"
         },
         {
             "role": "user",
-            "content": "Sounds correct and please roll the dice for us"
+            "content": "Yes we are level 1 and we would like to roll our own dice"
         },
         {
             "role": "assistant",
-            "content": "Excellent! Then let's delve into this adventurous world, shall we? Given that each of you is at Level 1, I'll ensure that the encounters you face are appropriate for your abilities.\n\nAnd worry not, as the DUNGEON MASTER, I'm more than happy to take care of the dice rolling.\n\nOur story awaits now. So grab your gear, double-check those character sheets, and ready yourself for the unexpected... for such is the life of an adventurer in the realms of Dungeons and Dragons!\n\nBest of luck, brave adventurers Cade and Cheba! I look forward to seeing where your journey takes you. Let's proceed, shall we?"
+            "content": "Perfect! Your journey takes control of the dice, adding an extra touch of fate to every decision. As you traverse the realms of Dungeons & Dragons, remember to let me know the outcomes of your rolls. Now, are both of you ready to begin this exciting journey? Remember to choose your character skills based on your class and level. If you need any help, simply ask."
         },
         {
             "role": "user",
-            "content": "Lets go!"
+            "content": "Ok, we filled out our skills can you check them?"
         },
         {
             "role": "assistant",
-            "content": "Under the cover of the twilight, your journey begins in the bustling city of Phandalin. The winding streets are quiet and the city is at peace. Both of you, Cade the Elf Rogue, and Cheba the Human Cleric, meet at the Stonehill Inn, a popular meeting spot for wanderers and adventurers like you. \n\nYou hear a rumor about a nearby goblin hideout that is rumored to contain a powerful artifact. While the artifact's nature remains unknown, it is believed that it can bring fortune and power to its possessor.\n\nAs you prepare to embark on this new adventure, you feel a mix of anticipation and determination. The challenge is suitable for your level, and the reward... potentially immense. \n\nYou decide to venture out first thing in the morning. As you rest for the night, I'll need you to make a perception check. Remember, I'll roll the dice for this check.\n\nLet's see what happens next, shall we? [Rolling Dice]"
-        },
-        {
-            "role": "user",
-            "content": "ok"
-        },
-        {
-            "role": "assistant",
-            "content": "With my role as the DUNGEON MASTER, I roll the dice for you [Rolling Dice]\n\nSuddenly, there is a suspicious rustling at the edge of your camp. Having rolled high on your perception checks, you both notice it. Cade with his elven eyes notices a silhouette of a goblin lurking in the shadows and Cheba's heightened senses feel the unsettling aura.\n\nHow would you like to react to this? Remember, talk between yourselves, make a decision and then tell me what you would like to do."
-        },
-        {
-            "role": "user",
-            "content": "We scramble to our feet with weapons drawn ready to fight!"
-        },
-        {
-            "role": "assistant",
-            "content": "Excellent! Steely resolve shines in your eyes as you draw your weapons, ready for the unexpected conflict. The silhouette notices your ready stance, and with a shrill shriek that pierces the quiet night, the goblin launches itself towards you.\n\nIt looks like it's time for our first encounter. \n\nIn D&D 5th Edition, we initiate combat by determining who goes first, and for that, we make an initiative check. \n\nI will roll the dice to determine the order of turns. [Rolling Dice] Let's prepare for battle, shall we?"
-        },
-        {
-            "role": "user",
-            "content": "To battle"
-        },
-        {
-            "role": "assistant",
-            "content": "Indeed, to battle! The dice have been rolled for initiative. \n\nOur order of attack will be:\n\n1. Cade,\n2. Goblin,\n3. Cheba.\n\nLet our encounter begin!\n\nCade, you're up first. What would you like to do on your turn? Remember, you can take one action and move up to your speed. Your Rogue abilities offer you options such as attacking with your weapon, using a cunning action, or other general options. Choose wisely."
-        },
-        {
-            "role": "user",
-            "content": "Id like to throw one of my daggers at the goblin"
-        },
-        {
-            "role": "assistant",
-            "content": "Very well, Cade, you prepare to throw your dagger at the goblin. As a Rogue, you have proficiency in this type of weapon, so when you make an attack roll, you will be adding your proficiency bonus and your Dexterity modifier to the roll.\n\nLet me roll the dice to see if your attack hits [Rolling Dice]."
-        },
-        {
-            "role": "user",
-            "content": "Does it hit?"
-        },
-        {
-            "role": "assistant",
-            "content": "Apologies for the suspense, Cade. The dagger whistles through the air and finds its mark. You successfully manage to hit the Goblin. \n\nNow, let's calculate damage for your attack. The damage for a thrown dagger is 1d4 + your Dexterity modifier, plus any other bonuses you might have. Allow me to roll for damage [Rolling Dice]. "
-        },
-        {
-            "role": "user",
-            "content": "How much dmg was it?"
-        },
-        {
-            "role": "assistant",
-            "content": "Searing through the air, your dagger strikes true, and the goblin shrieks as it digs into its flesh. You deal [Rolling Dice] points of damage. Well done, Cade! \n\nNow, the goblin, wounded and enraged, turns its attention to you. Its beady eyes glaring maliciously, it hisses and charges at you with its scimitar drawn.\n\nNow, it's Cheba's turn. Cheba, with your accrued knowledge as a Cleric, you have numerous options at your disposal. What would you like to do?"
-        },
-        {
-            "role": "user",
-            "content": "What spells does Cheba have?"
-        },
-        {
-            "role": "assistant",
-            "content": "As a Level 1 Cleric, Cheba has access to a variety of Cleric spells. The exact spells would depend on the chosen divine domain and the Wisdom modifier, but typically, a level 1 Cleric has access to:\n\nCantrips (at will): \n1. Light \n2. Sacred Flame \n3. Thaumaturgy \n\n1st level spells (limited slots per day): \n1. Cure Wounds \n2. Guiding Bolt \n3. Sanctuary \n\nClerics also have the ability to prepare different spells after each long rest, choosing from the entire Cleric spell list, so there may be other spells at their disposal. However, the above are often chosen ones.\n\nCheba, which spell or action do you prefer to use against the goblin?"
+            "content": "Excellent. To review your skill selections, enter the command !summary. Once the details are confirmed, we'll jump straight into your adventure. Enjoy the journey, adventurers!"
         },
         {
             "role": "user",
@@ -110,95 +54,775 @@
         },
         {
             "role": "user",
-            "content": "Cheba will use guiding bolt on the goblin"
+            "content": "Our skills have been updated"
+        },
+        {
+            "role": "assistant",
+            "content": "Outstanding! Having reviewed your character sheets, it is evident that as a level 1 rogue, Cade has notable proficiency in 'Acrobatics (Dex)', 'Sleight of Hand (Dex)', 'Stealth (Dex)', and 'Survival (Wis)'. As a level 1 cleric, Cheba shows proficiency in 'Medicine (Wis)' and 'Religion (Int)'.\n\nThis unique blend of skills will serve you well as we delve into the heart of your adventure. Are you ready to begin this thrilling venture into a world full of mystery, intrigue, and danger?"
+        },
+        {
+            "role": "user",
+            "content": "Yes, lets go"
+        },
+        {
+            "role": "assistant",
+            "content": "Very well, let the adventure begin!\n\nOur journey begins in the bustling town of Waterdeep. With its cobbled streets and tall buildings, it is a beacon of civilization in a wilderness-infused land. Our heroes, Cade, the Elvish rogue, and Cheba, the Human cleric, find themselves in the market district, surrounded by all manner of vendors and patrons, some more dubious than others.\n\nSuddenly, the loud clanging of a bell reverberates through the air! It's the alarm from the local bank, a stone\u2019s throw away from you. A group of armed and dangerous-looking figures dash out of the bank, bags of gold clinking in their hands.\n\nCade, with your quickness and stealth, you could potentially tail them and follow them to their hideout. Cheba, your wisdom and knowledge of the city streets might help anticipate their escape route and set a trap. What will you both do?\n\nRemember to roll your own dice for decision checks and let me know the result."
+        },
+        {
+            "role": "user",
+            "content": "Cade is going to attempt to hide and follow them. Cheba is going to attempt to hide and follow them as well."
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent, this requires a stealth roll from both of you. You want to blend into the crowd and shadows to follow these criminals unnoticed. Go ahead and roll your D20 and add your Stealth modifier. Don't forget, as a Rogue, Cade has an advantage on Dexterity (Stealth) checks, meaning you can roll the D20 twice and choose the higher result. Let me know the outcomes."
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled an 18"
+        },
+        {
+            "role": "assistant",
+            "content": "That's a high roll! For Cheba, even without a modifier, 18 is enough to smoothly blend into the city's crowd, hiding his true intentions behind the guise of an everyday citizen out for a stroll. Now let's see how Cade fares. Did he make his roll? With his advantage, he may choose the higher of two D20 rolls, adding his Stealth skill (Dex) modifier."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 13"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 13 and Cade's Stealth skill modifier, he manages to blend into the shadows, following the criminals without arousing suspicion. \n\nAs you stealthily tail the thieves through the winding streets of Waterdeep, they eventually lead you to a nondescript, rundown warehouse in the Lower City. There are guards posted at a side door around the back. \n\nWhat do you both wish to do now? Please remember to roll your own dice for decision checks or any actions you decide to take."
+        },
+        {
+            "role": "user",
+            "content": "Cade is going to sneak attack one of the guards. Cheba is going to cast sanctuary on herself."
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent choices. Let's get into the action.\n\nCade, as a rogue, you have the ability to deal extra damage to a creature you hit if you have an advantage on the attack roll. Because you're attacking from a hidden position, we'll give you that advantage. Please roll two d20s for your attack, and pick the highest. Add your Dexterity modifier and your proficiency bonus (since you're likely using a Finesse weapon like a short sword or dagger).\n\nCheba casts Sanctuary on herself. A great protective measure. Now, any creature who attempts to attack Cheba must first make a Wisdom saving throw or choose a different target.\n\nProceed with your actions and let me know your results."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 6."
+        },
+        {
+            "role": "assistant",
+            "content": "Even with a roll of 6 and adding his Dex modifier and proficiency bonus, Cade's surprise attack may not have been as successful as hoped.\n\nAs Cade makes his move to swiftly and deftly engage the guard, his footing slips on a loose cobblestone causing his attack to go wide.\n\nWith the element of surprise potentially lost, how do you choose to react to this sudden change in circumstances?"
+        },
+        {
+            "role": "user",
+            "content": "I want to hide again."
+        },
+        {
+            "role": "assistant",
+            "content": "Cade, well versed in the art of Stealth, quickly looks to find a new hiding spot to avoid detection. Please roll a D20 and add your Stealth skill modifier for this Dexterity (Stealth) check. Let me know the result. \n\nAnd Cheba, what would you like to do in this situation? Remember, you are still under the effects of Sanctuary."
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to know if attacking would break the sanctuary spell?"
+        },
+        {
+            "role": "assistant",
+            "content": "According to the rules in the Player's Handbook, the Sanctuary spell ends if the warded creature (in this case, Cheba) makes an attack or casts a spell that affects an enemy creature. The spell notes: \"If the warded creature makes an attack, casts a spell that affects an enemy, or deals damage to another creature, this spell ends.\"\n\nSo, to answer your question: Yes, attacking will indeed break the Sanctuary spell that Cheba has on herself."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a nat 20"
+        },
+        {
+            "role": "assistant",
+            "content": "With a perfect roll of 20, Cade becomes one with the shadows once again, his presence virtually undetectable from the guards or any passersby. Given the circumstances, and the criminals still likely in the vicinity, what would be your next move adventurers? Remember, Cheba, your Sanctuary spell is still active."
+        },
+        {
+            "role": "user",
+            "content": "Cheba want to throw a rock from her hidden spot to distract the guards and give Cade advantage during his next attack."
+        },
+        {
+            "role": "assistant",
+            "content": "A well-devised plan indeed. Cheba, please do an attack roll with your D20 for your rock throw. Although this is not a traditional attack, we will treat it as one to determine success. If your aim is true, the guards will be sufficiently distracted, providing Cade with the opportunity for a stealthy attack with advantage."
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 15"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 15, Cheba's aim is true. The rock whizzes through the air, landing with a thud and a clatter a fair distance away from the guards. Startled, they momentarily divert their attention to the unexpected noise giving Cade a window of opportunity.\n\nCade, seize the moment and make your stealthy attack on the distracted guard. You can roll twice and take the higher roll because of the distraction Cheba has provided. Add your Dexterity modifier and your proficiency bonus to the roll. Let's see how this pans out."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 18"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 18, Cade swiftly and silently moves like a shadow, his weapon finding its mark. Since surprise was achieved, his Rogue feature, Sneak Attack, comes into play, adding extra damage to this attack. Armed with his short sword, please roll for damage (1d6) and add your Dexterity modifier. Then roll your sneak attack damage (1d6 at Level 1). \n\nMeanwhile, Cheba observes quietly from her hiding place, her Sanctuary spell still in effect, carefully watching the unfolding action. \n\nLet's see the results of this potentially profound attack."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 5"
+        },
+        {
+            "role": "assistant",
+            "content": "A 5 on the damage roll, plus Cade's Dexterity modifier and his additional Sneak Attack damage culminate in a powerful Surprise Attack. The guard hit by Cade's sudden and unexpected attack grimaces in pain, the element of surprise adding a significant edge to Cade's assault.\n\nIn the unfolding chaos, the other guards are momentarily disoriented, giving you an opening. What would you like to do next? And Cheba, with your Sanctuary spell active, remember that you can aid without necessarily directly engaging in combat."
+        },
+        {
+            "role": "user",
+            "content": "What does Thaumaturgy do?"
+        },
+        {
+            "role": "assistant",
+            "content": "Thaumaturgy is a cantrip available to certain classes, including Clerics. According to the Player's Handbook:\n\n\"You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:\n\n- Your voice booms up to three times as loud as normal for 1 minute.\n- You cause flames to flicker, brighten, dim, or change color for 1 minute.\n- You cause harmless tremors in the ground for 1 minute.\n- You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.\n- You instantly cause an unlocked door or window to fly open or slam shut.\n- You alter the appearance of your eyes for 1 minute.\n\nIf you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.\"\n\nThis spell can be useful for various non-combat situations, such as intimidating or distracting enemies, gaining attention, or creating a diversion. Cheba, as a Cleric, you may utilise Thaumaturgy to your advantage in the current situation. It may prove particularly useful in disorienting the guards or causing a distraction."
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to cast thaumaturgy on the un-harmed guard makeing him hear whispers on both sides of his head."
+        },
+        {
+            "role": "assistant",
+            "content": "An excellent choice, Cheba. Casting Thaumaturgy, you focus your divine energy to create a disorienting auditory illusion. The unsuspecting guard suddenly hears eerie, ominous whispers echoing on both sides of his head. \n\nThis could potentially create enough confusion and fear to further disrupt the guards and provide you with more control over the situation. Let's see what occurs next. And remember, despite this conflict seeming to go in your favor thus far, things can always change. Always be prepared for the unexpected. \n\nWhat will be your next move, Cade and Cheba?"
+        },
+        {
+            "role": "user",
+            "content": "Do we need to roll initiative?"
+        },
+        {
+            "role": "assistant",
+            "content": "In the current scenario, the formal combat hasn't exactly started yet; you've been dealing with the guards more so through surprise encounters and distractions. However, if you're intending to start a more direct combat encounter now or engage multiple enemies, then yes, it would be time to roll for initiative to determine the order of turns.\n\nIf you'd like to proceed into formal combat, please each roll a D20 and add your Dexterity modifier for your initiative. Otherwise, you can keep pursuing your current approach."
+        },
+        {
+            "role": "user",
+            "content": "Is Cade still hidden?"
+        },
+        {
+            "role": "assistant",
+            "content": "Given Cade's successful stealth check and his success in executing a surprise attack on the first guard, as far as rules are concerned, he'd still be considered in a state of hiding. The remaining guards are currently disoriented, between Cheba's rock throwing and Thaumaturgy spell, and Cade's silent attack. If he stays out of sight and takes care not to draw attention to himself, he should be able to maintain his hidden state. However, it could change depending on his next action or if the guards actively look for him. What would you both like to do next?"
+        },
+        {
+            "role": "user",
+            "content": "Can you use ascii art to draw out a simple example of the battle we are in currently. Like a top down map of sorts that shows the location of the guards and the players?"
+        },
+        {
+            "role": "assistant",
+            "content": "Absolutely, here's a crude representation. The \"G\"s represent guards, \"C\" represents Cade, and \"H\" represents Cheba. The \"D\" represents the doorway they are guarding, and the \"_\" and \"|\" represent the surrounding walls of the warehouse. \n\n```\n_____________________\n|                                       |\n|                                       |\n|                                       |\n|     C                               |\n|                                       |\n|    G  G   D                     |\n|                                       |\n|     H                               |\n|____________________|\n```\n\nPlease interpret this as a rough and ready diagram. Not exactly to scale, but hopefully it aids in visualizing the situation. In this, Cade is close enough for a melee attack on the guards, while Cheba is slightly farther back but still close enough to be effective with her actions. The guards stand close to the door of the warehouse."
+        },
+        {
+            "role": "user",
+            "content": "Cheba want to make crow nosies in addition to the whispers besides both guards heads."
+        },
+        {
+            "role": "assistant",
+            "content": "Using your Thaumaturgy cantrip, you weave more auditory illusions around both guards. Suddenly, they hear the cawing of crows, as if a murder of them had appeared right next to their heads - flapping wings, crows cawing and all. Coupled with the ominous whispers, they become quite unnerved, their attention wholly directed towards these strange and eerie phenomenon. Cheba's divine intervention has added to the chaos and distraction amidst the guards.\n\nMeanwhile, as the distractions continue, what shall be the stealthy Cade\u2019s next move?"
+        },
+        {
+            "role": "user",
+            "content": "I want to sneak attack the same guard I already hit"
+        },
+        {
+            "role": "assistant",
+            "content": "A good call, Cade. Using your Rogue's natural ability of stealth and ambush, you creep closer to the same guard that you had previously struck. Aiming for a finishing move while the quarry is still distracted and under duress from the eerie crow sounds and ominous whispers. \n\nAs you're hidden and the target is engaged with the illusion, you can roll with advantage. Take two D20 rolls for your attack and choose the higher roll, add your Dexterity modifier, and proficiency bonus. This might ensure a Sneak Attack if successful. Please proceed."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 8"
+        },
+        {
+            "role": "assistant",
+            "content": "An 8, along with Cade's Dexterity modifier and proficiency bonus, may not be the powerful strike you hoped for, but let's see how it plays out.\n\nDespite the cacophony of phantom crow noises and disconcerting whispers, the guard seems to have an uncanny reaction time, and as Cade lunges for him, he manages to sidestep, effectively dodging the attack. However, due to the distraction still in place, he does not immediately identify the source of the attack.\n\nThe situation is evolving rapidly. What actions will Cade and Cheba take next?"
+        },
+        {
+            "role": "user",
+            "content": "Is Cade still hidden?"
+        },
+        {
+            "role": "assistant",
+            "content": "Given the circumstances\u2014an unsuccessful attack followed by immediate camouflage amongst the crowd\u2014Cade has managed to remain covert and undetected. This is largely to do with the disoriented guards being heavily distracted by Cheba's Thaumaturgy illusions\u2014crows cawing and ominous whispers\u2014keeping their focus away from identifying Cade. Stealthily, Cade has managed to maintain his hidden state. Ready for your next move, adventurers? What do you choose to do? "
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to produce light in the faces of the guards in addition to the whispers and crows."
+        },
+        {
+            "role": "assistant",
+            "content": "A brilliant strategy, Cheba! Using the Thaumaturgy cantrip once more, you can indeed create a bright flash of light before their faces. This sudden flare of dazzling light is bound to further disorient the guards. \n\nAs a beacon of brilliance illuminates their immediate surroundings, the guards shield their eyes, momentarily blinded and significantly disoriented. The phantom noises, coupled with this unexpected flash of light, have them bewildered and left staggering.\n\nCade, with the guards even more distracted, you have another opportunity to strike. What is your next move?\n"
+        },
+        {
+            "role": "user",
+            "content": "Cade will sneak attack the wounded guard!"
+        },
+        {
+            "role": "assistant",
+            "content": "Cade, seeing the guards in disarray, seizes the opportunity for another attack on the already wounded guard. With the guards remaining distracted, Cade continues to have the element of surprise on his side.\n\nPlease roll a D20 for your attack. Given the circumstances, you roll with advantage, so roll twice and use the higher result. Add your Dexterity modifier and proficiency bonus. If you're successful, you'll deal damage with your weapon and add your Sneak Attack bonus. Let me know the outcomes."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 18"
+        },
+        {
+            "role": "assistant",
+            "content": "A roll of 18, plus Cade's dexterity modifier and proficiency bonus, lands a successful sneak attack on the already wounded guard. The stealthy rogue does a significant amount of damage, all while maintaining his cover amidst the chaos.\n\nWith his weapon unsheathed, Cade lunges towards the bewildered guard. The attack finds it mark. Now it's time to calculate damage. Cade, please roll for damage (1d6 for short sword) and your Sneak Attack bonus (another 1d6), adding your Dexterity modifier to the total.\n\nAnd Cheba, how do you wish to build on this successful stealth attack? Your allies strike has landed, the plan is in motion and the guards are under duress. What will be your next move?"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a total of 2"
+        },
+        {
+            "role": "assistant",
+            "content": "Even with a roll of 2, plus his Dexterity modifier and additional Sneak Attack damage, Cade lands a decisive blow on the already wounded guard. Caught completely off-guard amidst the illusion-induced chaos, the guard buckles, severely weakened but still standing.\n\nThe situation remains tense, the outcome of the encounter still hangs in the balance. There's one guard still largely unharmed, and the other severely wounded, both disoriented and undermined by the clever tactics you have employed. \n\nCheba, the floor is yours. What do you and Cade decide to do next?\n"
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to maintain the distractions and Cade wants to sneak attack the wounded guard!"
+        },
+        {
+            "role": "assistant",
+            "content": "Employing a relentless torrent of distractions, Cheba continues to sow chaos amongst the guards, ensuring they remain disoriented and off-balance. \n\nMeanwhile, Cade remains undetected, ready for another well-aimed sneak attack against the already significantly weakened guard. Roll a D20 for your attack, Cade. Remember, you roll with advantage due to Cheba's distractions, so roll two D20s and take the higher number. Add your Dexterity modifier and proficiency bonus. If the attack is successful, you can roll for damage and add your Sneak Attack bonus.\n\nLet's see how this plays out. Roll and report your outcomes, adventurers."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 14"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 14, plus his dexterity and proficiency bonuses, Cade's sneaky assault meets its mark once again. As the rogue continues his quiet, deadly assault on the guard, the advantage lies with him.\n\nNow let's wrap this up. Cade, roll your damage dice (1d6 for the short sword) and apply your Sneak Attack bonus (another 1d6 at level 1). Add your Dexterity modifier and let me know the total. \n\nCheba, your distracting gambit has successfully allowed Cade to land numerous blows on the guard. What will you do next to continue supporting Cade or to interact with the other guard?"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a total of 7"
+        },
+        {
+            "role": "assistant",
+            "content": "With a strong roll of 7 plus Cade's Dexterity modifier for damage and his additional Sneak Attack damage, the guard under attack is grievously wounded and buckles under Cade's relentless assault. He slumps to the ground, unable to fight any longer.\n\nOne guard incapacitated, one guard left, still disoriented by Cheba's Thaumaturgy. It seems the tide of this encounter has turned in favor of our heroes. Cheba, what will be your next course of action? And Cade, how will you use this advantage?"
+        },
+        {
+            "role": "user",
+            "content": "Cade wants to finish off the guard on the ground. Cheba wants to attack the un-harmed guard with Guiding Bolt!"
+        },
+        {
+            "role": "assistant",
+            "content": "Witnessing the fallen guard, Cade advances to ensure he won't be a threat any longer. As a rogue, he has the ability to deal a considerable amount of damage to incapacitated enemies, and it's time to put it to the test. Cade, please roll a D20 for your attack.\n\nOn the other side, Cheba prepares to unleash a Guiding Bolt spell on the remaining guard. The bolt of light will not only deal significant damage if it hits, but it will also provide advantage to the next attack roll made against the target, thanks to the mystical dim light glittering on the target until then. Cheba, please roll a D20 and add your spell casting modifier for the attack roll. \n\nLet me know your results, adventurers!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 5 and Cade rolled a 16"
+        },
+        {
+            "role": "assistant",
+            "content": "Cade, with a roll of 16 plus his proficiency bonus and Dexterity modifier, ensures the guard on the ground will not rise again. Cade's quick actions have secured the immediate vicinity from immediate threats.\n\nCheba, despite her good intent, the roll of 5 coupled with her spellcasting modifier might not be sufficient for the Guiding Bolt to find its mark. The bolt of divine energy shoots from her hand but goes wide, missing the disoriented guard.\n\nAs the battle scenario evolves rapidly, it is still under your control. However, remember to always expect the unexpected in the world of Dungeons and Dragons. \n\nWhat's the plan now, Cade and Cheba?"
+        },
+        {
+            "role": "user",
+            "content": "Do we need to roll iniative now?"
+        },
+        {
+            "role": "assistant",
+            "content": "As the other guard has fallen and only one remains, who is currently disoriented and not actively engaged in combat, you can continue to use your surprise and environment to your advantage, as you have been. However, if you want to engage the remaining guard in direct combat, then yes, we would need to roll for initiative to determine turn order. \n\nThe choice is yours. Would you like to deal with the last guard through surprise and stealth, or face him head-on in direct combat by rolling for initiative?"
+        },
+        {
+            "role": "user",
+            "content": "Cade will sneak attack the remaing guard. Cheba will cast guiding bolt again"
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent choices! Given the guard's disoriented state, Cade aims to land another surprise attack. Roll a D20 with advantage for your attack roll, Cade. Please remember to add your Dexterity modifier and proficiency bonus. \n\nCheba, determined to land her Guiding Bolt, channels her divine energy once more. Roll a D20 and add your spellcasting modifier for the attack roll of your Guiding Bolt. \n\nLet's find out how these actions affect the grip you have on this encounter. Remember, though the guard is disoriented and distracted, as with anyone cornered, he may fight back with surprising vigor when provoked. \n\nRoll and let me know the outcomes!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 9 and Cade rolled 13"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 9, Cheba's Guiding Bolt unfortunately misses again, the divine energy dissipating without doing damage to its intended target. But do not worry, Cheba. Battles are full of hits and misses and they do not indicate the final outcome.\n\nMeanwhile, Cade continues to showcase his tremendous skills as a rogue, neatly landing another sneak attack with a roll of 13, + his dexterity and proficiency bonuses. Cade, please roll for your damage (1d6 for short sword) and add sneak attack bonus (another 1d6 at level 1). \n\nWe'll soon find out if this was enough to take down the last guard standing or if he manages to fight back despite the odds. Keep me posted with your dice rolls!"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a total of 11"
+        },
+        {
+            "role": "assistant",
+            "content": "With a significant damage roll of 11, including the additional Sneak Attack damage, Cade's deft strike rapidly incapacitates the last guard standing. The element of surprise and constant pressure wore him down quicker than he could retaliate. \n\nWith all the guards now incapacitated, the entrance to the warehouse lies open and unguarded. The way forward seems clear, but remain cautious, as unknown danger could still lurk within.\n\nCheba and Cade, what will be your next move in this daring adventure?"
+        },
+        {
+            "role": "user",
+            "content": "How much exp did we get?"
+        },
+        {
+            "role": "assistant",
+            "content": "To approximate experience points gained, the Dungeon Master's Guide suggests awarding players for overcoming challenges, not just combat. These guards were rather tough, using some quick thinking and clever tactics you two manage to overcome them.\n\nConsidering this, a rough estimate for each guard would be 50 Experience Points (XP) as they are somewhat similar to a bandit or guard stat block (a 1/8 Challenge Rating enemy). Since there were two of them, a total of 100 XP can be awarded to your party, split evenly.\n\nThis means, for this encounter, each character gains 50 XP. \n\nAs you progress, remember that it's not only defeating enemies that can earn you XP. Clever thinking, role-playing, and overcoming all kinds of challenges can also earn you more XP on your path to leveling up. \n\nGreat job, Adventurers!"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "user",
+            "content": "We have updated our sheets to show that we have a total of 50exp."
+        },
+        {
+            "role": "assistant",
+            "content": "Great! Updating your character sheets is an essential part of Dungeons & Dragons, reflecting your character's growth and achievements in the game. With 50 XP each, Cade the Elf Rogue and Cheba the Human Cleric are on their way to their next level. They have shown their prowess and teamwork in the encounter with the guards, and I'm sure they'll approach future challenges with the same determination. Keep up the good work, adventurers!"
+        },
+        {
+            "role": "user",
+            "content": "We want to loot the guards"
+        },
+        {
+            "role": "assistant",
+            "content": "As you approach the fallen guards, you notice they're not carrying much. Upon closer inspection, you find a few items which may be of interest or use to you:\n\n1. Each guard has a short sword and a set of city guard armor, although the armor is rather worn and would not fit either of you without significant adjustments. \n\n2. You also find a total of 15 gold pieces between the two of them.\n\n3. Additionally, one of the guards has a crudely drawn map. From what you can tell, it seems to be a map of the nearby surroundings and supply routes for the city. \n\nRemember, looting fallen foes can sometimes yield useful items, but it's not always ethical or appreciated by local populations. Manage your actions wisely. Your actions could determine how future interactions unfold with other characters you've not yet met."
+        },
+        {
+            "role": "user",
+            "content": "Cheba is taking the gold and Cade will hold onto the map."
+        },
+        {
+            "role": "assistant",
+            "content": "Noted. Cheba pockets the 15 gold pieces, adding them to your current funds. With a little more wealth in your possession, you can look forward to gearing up for your future adventures!\n\nCade carefully studies the crudely drawn map before folding it and tucking it away safely. Even though it might not seem valuable now, it could come in handy later for understanding the city's supply routes or maybe even discovering a secret or two. \n\nAs you gather these items and plan your next move, remember to update your character sheets to reflect these new additions. \n\nHaving dealt with the guards and explored their possessions, what would you like to do next?"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "user",
+            "content": "We have updated our sheets with the loot we found. What city are we in?"
+        },
+        {
+            "role": "assistant",
+            "content": "Before answering, I'd like to note that as a Dungeon Master, I can be flexible and tailor the game to your preferences and narrative. Let's assume that you're in the city of Waterdeep, a bustling and major metropolis in the Forgotten Realms.\n\nWaterdeep, also known as the City of Splendors or the Crown of the North, is one of the most important and influential cities in the North. It's known for its robust commerce, political intrigue, and a den of all kinds of creatures co-existing together. The city is teeming with potential quests, allies, and enemies - a perfect setting for promising adventurers like yourselves.\n\nYou've just dealt with some local guards at the edge of Dock Ward, a rough sector known for its warehouses and shady figures. The loot you've found, along with the map, could assist you in navigating the nitty-gritty of this energetic area.\n\nWith that being said, your characters now have the opportunity to further explore Waterdeep and embrace more adventures. What's your next move, Adventurers?"
+        },
+        {
+            "role": "user",
+            "content": "Are there any windows or cracks in the walls of the warehouse were we can peek in before going inside?"
+        },
+        {
+            "role": "assistant",
+            "content": "Well done, Adventurers, for deciding to scope out the area before blindingly entering - that's wise and effective!\n\nAs you approach the warehouse, you notice that it's a sturdy, large wooden building. The whole structure appears to be closed off. However, you manage to find a small crack in one of the wooden walls that could provide a limited view inside, but requires getting really close due to its size.\n\nA couple of rows above, there's also a window. But it's quite high off the ground, and it would need some climbing or a boost for someone to peek through.\n\nYou have two options: you can either risk getting closer and peek through the crack, or one of you can try to climb up to the window. \n\nWhat would you like to do?"
+        },
+        {
+            "role": "user",
+            "content": "Cade will stealth up to the crack and peek through"
+        },
+        {
+            "role": "assistant",
+            "content": "Good call, Cade! Using your stealth to get closer lessens the chance of anyone inside noticing you.\n\nRoll a D20 for your Stealth check, adding your Dexterity modifier and proficiency bonus due to your stealth skill. Afterwards, roll a D20 for your Perception check to see what you can notice through the crack, adding your Wisdom modifier.\n\nLet me know the outcomes, and we'll find out what Cade can see inside the warehouse.\n"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 16 for stealth and a 14 for perception"
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent rolls, Cade!\n\nWith a Stealth check of 16, Cade moves like a shadow, avoiding any loose gravel and creaky boards, he successfully reaches the crack undetected. \n\nHis Perception check of 14 didn't fail him either. As Cade peers through the crack, he gathers the following information:\n\n- The warehouse appears to be dimly lit, with several crates stacked irregularly. Some seem to be covered in dust, suggesting they haven't been moved for a while.\n\n- On one side, he observes a group of four individuals. They are engaged in hushed conversation, but with his roll, he can't make out the specifics from this distance. Their attire blends in with the city's low life, and they seem armed but not excessively.\n\n- Cade also notices a door on the other side of the warehouse and what appears to be a staircase leading to a higher level.\n\nThis is a quite useful reconnaissance, Cade! So, what will be the adventurers' next move?"
+        },
+        {
+            "role": "user",
+            "content": "Will the window allow us to see the second story?"
+        },
+        {
+            "role": "assistant",
+            "content": "Given the position and the size of the window, it is located on the ground floor level of the warehouse, so it would not provide a direct line of sight to the second story. \n\nHowever, there is a chance that once you're boosted up to look through the window, you might be able to see higher up, depending on the internal layout of the warehouse. For example, if the second floor is a loft or if there's an open balcony, you may be able to get at least a partial view.\n\nRemember, the window is significantly higher and looking through it would require a bit of a climb or boost. This might be more noticeable than peeking through a crack.\n\nWould you like to attempt to look through the window, or do you have another action in mind?"
+        },
+        {
+            "role": "user",
+            "content": "Ok, we want to cause a distraction outside so the 4 guards come running out. Before we do that though we are going to hold our rope across the doorway about 6 inches off the ground. Cheba will hold one side and Cade will hold the other. This way when the guards come running out they trip over the rope and then we attack them!"
+        },
+        {
+            "role": "assistant",
+            "content": "A brilliant plan! Using the element of surprise along with the environment can definitely provide an edge in this situation. \n\nTo set this plan in motion, you'd need to create a distraction strong enough to draw out all the guards. Moreover, positioning the rope correctly and at the right time requires precision, stealth and coordination between both of you.\n\nLet's break this down into steps:\n\n1. Tying and positioning the rope: This seems straightforward, so no check is needed. Right before you create the distraction, you swiftly tie the rope and hold it at the planned height across the doorway.\n\n2. Creating the distraction: You need to create a noise or event significant enough to draw out the guards but not alert the whole neighborhood. This could be a Charisma (Deception) check or an Intelligence check to know how much noise or type of distraction would be ideal.\n\n3. Stealth Check: Even though you've remained undetected, holding the rope across the doorway might reveal your presence. I'd recommend Cade and Cheba to perform a Stealth check and remain hidden.\n\nIf the above steps are successful, the guards will be drawn out and hopefully trip over the rope. Then, it's a matter of seizing the initiative and taking them down. \n\nFirst, let's roll for Creating the distraction. Which one of you will attempt to create the distraction and what's your plan?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba will create the disctraction using thaumaturgy. She will create a voice that sounds like one of the guards and in an alarmed tone yell for the 4 to come running out."
+        },
+        {
+            "role": "assistant",
+            "content": "Fantastic choice! Utilizing Thaumaturgy, a cantrip that Cheba knows, is an excellent way to create a convincing distraction without drawing unnecessary attention to yourselves. \n\nCast Thaumaturgy and roll a Charisma (Deception) check to make the voice sound realistic and panicked enough to convince the guards. Please remember to add your Charisma modifier to the roll.\n\nAfter that, both you and Cade should roll for Stealth, adding your Dexterity modifiers, to ensure you remain unseen while holding the rope. \n\nGive me the roll results and let's see how this creative strategy unfolds!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 1 for the deception check. Cheba rolled a 9 for stealth check and Cade rolled a 15."
+        },
+        {
+            "role": "assistant",
+            "content": "Despite Cheba's best efforts with Thaumaturgy, the roll of 1 on her Deception check unfortunately suggests that the voice doesn't quite cut through as she hoped. Instead of sounding alarmed and urgent, it comes across as slightly distorted and not entirely convincing.\n\nHowever, the Stealth checks of both Cheba and Cade are certainly enough to ensure they remain unseen as they hold the rope across the door, ready to trip any incoming guards.\n\nBut what happens next? Will the guards inside the warehouse be fooled by the echo of their comrade's voice emanating from the outside so suddenly, despite its distorted sound? Or will they instead become even more wary, escalating the difficulty of your task?\n\nAs you wait, bated breaths and tight grips on the ends of the rope, you hear shifting of feet from inside the warehouse. What do you wish to do now?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba will try the voice again!"
+        },
+        {
+            "role": "assistant",
+            "content": "Cheba, gathering her focus, gives the spell another go. Roll a d20 for Deception once more and let's find out whether the renewed attempt to mimic the guard sounds more convincing this time. \n\nWhile Cheba's focus is primarily on refining the fake distress call, it would be wise for both of you to maintain a tight grip on the rope and stay prepared for any sudden reaction from inside the warehouse.\n\nLet me know what you roll, and we'll determine how the warehouse inhabitants respond to this second attempt."
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 3"
+        },
+        {
+            "role": "assistant",
+            "content": "Despite her best efforts, Cheba's second attempt to mimic the distressed guard unfortunately fares no better than the first. The voice again comes out distorted and unconvincing with a roll of 3.\n\nAlthough the Thaumaturgy spell successfully creates the sound, the execution and delivery of the fake distress call lack the necessary distress and urgency, which could be a red flag for the individuals inside.\n\nThere's a moment of silence before you hear chattering from inside the warehouse. It seems like they are discussing the strange voice they've heard. While it's hard to gauge their exact reaction, you sense that they might be on high alert now.\n\nYour planned ambush might become more challenging as they may exercise extra caution while exiting the warehouse. It's also possible that they might not come out at all or send only one person to investigate.\n\nIt's a crucial moment, and you must act swiftly. What would you like to do next?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba tries the voice for a 3rd time! 3rd times a charm!"
+        },
+        {
+            "role": "assistant",
+            "content": "Cheba's determination is admirable. Drawing in a deep breath, she focuses all her energy once more into the Thaumaturgy spell. She tries to give the voice more alarm and urgency this time, hoping that the third time will indeed prove to be a charm.\n\nRoll a d20 for Deception, adding Cheba's Charisma modifier, and let me know the result. Good luck, Cheba! The fate of your clever plan hinges on this crucial moment."
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled a 12"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 12, Cheba manages a more urgent and convincing voice this time around. The magically amplified alarm echoes around the exterior of the warehouse as if it came from a guard in distress.\n\nThere's no standing around now. From inside the warehouse, quick and confused murmuring can be heard, followed by rushed footsteps towards the warehouse entrance. These sounds hint that the guards are reacting to the urgent call this time and are starting to take action.\n\nCade and Cheba continue to hold the rope steady across the entrance, anticipating the guards to rush out any second now.\n\nThe tension in the air is palpable. Get ready, adventurers! The moment of your surprise attack is almost upon you."
+        },
+        {
+            "role": "user",
+            "content": "We get ready to attack once they trip over the rope."
+        },
+        {
+            "role": "assistant",
+            "content": "That's a wise decision! Your hands tighten around the rope as hurried footsteps from inside the warehouse get louder and closer. You see the warehouse door begin to open, and four confused guards come rushing out.\n\nThis is the moment! Wait for them to trip over the rope, then seize the initiative and take the advantage in attack. In this surprise round, you will have the opportunity to strike first.\n\nRoll for your attacks. Remember, due to the successful surprise, you have advantage, allowing you to roll a D20 twice and take the higher number. Let's see how this cunning trap plays out!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to crush their ankles with her warhammer, she rolled an 11. Cade wants to cut their ankles with his shortsword, he rolled a 11."
+        },
+        {
+            "role": "assistant",
+            "content": "Nicely done, Cheba and Cade! With rolls of 11 each, plus your respective proficiency bonuses and modifiers (Cheba's Strength and Cade's Dexterity), you both swing at the fallen guards. Cheba with her warhammer and Cade with his shortsword aim at their ankles. \n\nThe quick strike following their stumble leaves them little room to react. Cheba and Cade, please roll for your damage. Cheba, use your weapon's damage die (1d8) and don't forget to add your strength modifier. Cade, roll your weapon's damage die (1d6), and as this is a surprise attack, don't forget to add your sneak attack damage (1d6). \n\nLet's find out how much damage this well-coordinated attack causes!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolled an 8 and Cade rolled a 3"
+        },
+        {
+            "role": "assistant",
+            "content": "Cheba, with her warhammer, brings it down hard on the closest guard's ankle. An 8 on the dice, plus her strength modifier - she lands a heavy blow. The limp guard lets out a cry and falls onto the ground, incapacitated.\n\nCade's shortsword slices neatly at the next guard's ankle with a total of 3 damage once his dexterity modifier and the bonus damage from the sneak attack are added. While it isn't a fatal blow, it does cause the guard to wince in pain and momentarily lose focus.\n\nNow, two out of the four guards are seriously injured and at a disadvantage. There's still the matter of the other two, who got over their initial shock of the tumble and are now regaining their composure, preparing to retaliate. You've caught them off guard and dealt the first damage, turning this encounter in your favor.\n\nPrepare yourselves, adventurers. The remaining guards will now try to fight back. Roll for initiative!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolls a 9 and Cade rolls a 16. Is Cheba still casting sanctuary?"
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent initiative rolls! With a 16, Cade is quick to react, ready to make his move as soon as an opportunity presents itself. With a 9, Cheba is also prepared, although she'll act after Cade and the guards in the combat order. \n\nAbout Sanctuary, this spell lasts for 1 minute and requires concentration. Cheba had been using Thaumaturgy, which doesn't require concentration, so her Sanctuary spell (if she had cast it before) would've remained active as long as she hasn't cast another spell that requires concentration, been incapacitated, or suffered harm. She also couldn't have cast a spell that affects an enemy directly, like Guiding Bolt, or the protection from Sanctuary would end.\n\nFrom what I've seen in the adventure so far, she hasn't indicated casting Sanctuary. However, if this was an oversight in communication and she intended to cast it before setting up the ambush, I can include it accordingly. Please confirm or correct my understanding.\n\nWith the initiative rolled, the combat round will go as follows: Cade, Guards, and then Cheba. Cade, you're up first. What's your move?"
+        },
+        {
+            "role": "user",
+            "content": "Cade will throw a dagger at the closest guard. Cheba will cast sanctuary."
+        },
+        {
+            "role": "assistant",
+            "content": "Great choices, both of you.\n\nUtilizing his quick reaction, Cade pulls out a dagger and aims for the closest guard. Roll a d20 for your attack, adding your Dexterity modifier and proficiency bonus.\n\nMeanwhile, Cheba uses her turn to cast Sanctuary on herself. As this spell wards a creature within range against attack, any creature who targets Cheba with an attack or harmful spell must first roll a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. With this spell cast, Cheba gains an added layer of protection.\n\nCade, please let me know your attack roll to determine if your dagger finds its mark. Cheba, note that your Sanctuary spell will hold as long as you maintain concentration and don't cast a spell that directly affects an enemy. What's next, adventurers?"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls a 15"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 15 plus his dexterity modifier and proficiency bonus, Cade expertly throws his dagger towards the closest standing guard. The dagger flashes through the air, aimed at its target.\n\nTo determine the result, please roll for damage, Cade. Your dagger's damage die is 1d4, and you can add your Dexterity modifier to the damage. \n\nAlso, remember that as this is part of the surprise round, you can add your sneak attack bonus (1d6) to the damage if this attack hits. \n\nLet me know the result and we'll describe the outcome!"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls a total of 9"
+        },
+        {
+            "role": "assistant",
+            "content": "With a remarkable total damage of 9, Cade's dagger finds its mark. The thrown dagger buries itself deep into the startled guard's shoulder, causing him to stumble back with a shocked cry. He's gravely injured and momentarily incapacitated from the sheer force and surprise of the attack.\n\nOne guard remains standing, eyes darting between his downed companions and the adversaries who've suddenly sprung this well-coordinated ambush. The initial surprise has given way to a desperate determination in his eyes.\n\nStill, the momentum is with you, Cade and Cheba. With Cheba's Sanctuary spell providing an extra layer of divine protection and Cade's swift and damaging attacks, you continue to dictate the pace and flow of this encounter.\n\nIt's the guards' turn next, their moves will depend on their current situation and the pain from their injuries. What's your plan, adventurers?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba wants to use thaumaturgy to whisper \"RUN\" to the last standing guard. Cade will attempt to hide."
+        },
+        {
+            "role": "assistant",
+            "content": "Using Thaumaturgy, Cheba aims to instill fear and incite the remaining guard to flee. This doesn't require a roll since she's using it to create a sound and not to convince or lie to the guard.\n\nCade, on the other hand, quickly takes advantage of the chaotic situation and attempts to blend into the darkness. Roll a D20 for Stealth, add your Dexterity modifier and proficiency bonus to it, and let's find out how well you manage to hide!\n\nLet's see how the last standing guard reacts to the whisper and the sudden disappearance of one of his adversaries. Don't forget to let me know the Stealth check result!"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolled a 15. What did the guard do during his turn?"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 15 plus his Dexterity modifier and proficiency bonus, Cade successfully melts away into the shadows, becoming practically invisible to anyone around.\n\nAs for the sole standing guard's reaction, the combination of seeing his comrades downed so swiftly, the chilling whisper of \"run,\" and the sudden disappearance of one of his adversaries proves to be too much. Fear takes hold of him. \n\nRather than fight a losing battle against an unseen enemy and possibly supernatural forces, he turns on his heel and sprints away as fast as he can, clearly heeding Cheba's whispered suggestion to run.\n\nYour quick thinking and effective execution have successfully diffused what could've been a tough battle, leaving the warehouse entrance unguarded again. Nicely done, Cheba and Cade! \n\nWhat would you like to do next?"
+        },
+        {
+            "role": "user",
+            "content": "Success! How much exp do we get? And we would like to loot the bodies."
+        },
+        {
+            "role": "assistant",
+            "content": "Well done overcoming these guards. For causing them to flee, the experience points awarded would be the same as if you had defeated them in combat. Thus, awarding you another 100 XP, split between the two of you, which equates to 50 XP each. \n\nAs for looting the bodies, upon a quick search you discover:\n\n1. Each guard has a short sword. They're not in great condition but they're functional.\n2. 10 gold pieces in total across the fallen guards.\n3. One of the guards carries a small iron key. Its use is unknown.\n4. One guard has a half-eaten apple which, although a bit bruised, still looks relatively fresh.\n\nRemember to add these to your inventory if you choose to take them. What's your plan now, would you like to finally check inside the warehouse?"
+        },
+        {
+            "role": "user",
+            "content": "Cade takes the 10gp. Cheba takes the small iron key. Should we not get more exp? 100xp per guard?"
+        },
+        {
+            "role": "assistant",
+            "content": "You're correct in your understanding of the guidelines provided in the Dungeon Master's Guide for assigning XP. However, it's important to note that these guidelines are often adjusted and tuned based on the Dungeon Master's vision for the campaign, the difficulty and context of the encounters, and the overall progression rate desired.\n\nIn this case, the 50 XP assigned to each guard is based on an estimation that considered the guards as enemies of a lower Challenge Rating (CR). Treating them as CR 1/8 enemies comparable to standard Bandits or Guards as per Monster Manual stat blocks, their given XP reward is 25 XP each. Doubling this for the successful handling of two guards yields 100 XP cumulatively, split to 50 XP per player.\n\nIf you feel your game would benefit from a faster progression rate or that this encounter was significantly more complex or dangerous than a pair of CR 1/8's, feel free to adjust the XP reward accordingly. The goal is to provide a rewarding and fun play experience.\n\nDo you intend to adjust the XP reward for this encounter, wishes to keep it as is, or is there another course or query you'd like to pursue? And what will be your next in-game action?"
+        },
+        {
+            "role": "user",
+            "content": "We defeated 3 guards total right? Tripped 2 and downed them, then hit one with a thrown dagger, and finally made the last one flee."
+        },
+        {
+            "role": "assistant",
+            "content": "My apologies for the oversight - you're absolutely correct. In the heat of describing the action, I seem to have missed an additional guard in the XP calculation. With the defeat and rout of three guards, we should indeed adjust the experience points accordingly.\n\nGiven that each guard is treated as a CR 1/8 enemy and provides 25 XP, defeating three such foes should result in a total of 75 XP per character. This is in addition to the 50 XP previously earned, which should bring each of your characters to a total of 125 XP.\n\nI'm sorry for the confusion, and thank you for your patience. Excellent job on your victories, and be sure to mark your character sheets accordingly! Now, where would you like to go next in your adventure? Do you want to explore the warehouse further, or do you have other plans?"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "user",
+            "content": "We have updated our sheets. Lets sneak into the warehouse."
+        },
+        {
+            "role": "user",
+            "content": "Hello DM"
+        },
+        {
+            "role": "user",
+            "content": "Hello DM"
+        },
+        {
+            "role": "assistant",
+            "content": "Hello! How can I assist you with your D&D game today?"
+        },
+        {
+            "role": "user",
+            "content": "Lets pick up where we left off"
+        },
+        {
+            "role": "assistant",
+            "content": "Of course! As a quick reminder, the last event that took place was the successful ambush of four guards at the warehouse entrance. \n\nCade and Cheba had encountered these guards and using a combination of direct attacks and distraction, managed to incapacitate three of these guards and convince the fourth to flee. \n\nAfter the skirmish, Cade took 10 gold pieces from the guards while Cheba picked up a small iron key of unknown use. With 3 guards defeated, each character earned an additional 75 experience points for a total of 125 experience points currently.\n\nAfterward, you made the decision to sneak into the unguarded warehouse.\n\nNow we can get back to the game and I would ask you to roll for stealth for a discreet entry."
+        },
+        {
+            "role": "user",
+            "content": "Can you use ascii to draw a simple map of our surroundings please?"
+        },
+        {
+            "role": "assistant",
+            "content": "Of course! Here is a basic representation of your current environment. Each \"-\" or \"|\" is about 5 feet. The \"G\"s represent the incapacitated guards. \"C\" is for Cade and \"Ch\" for Cheba. The \"D\" is the door of the warehouse.\n\n```\n-----------------------------------\n|                                 |\n|         G                       |\n|                             Ch  |\n|         G                       |\n|                           C     |\n|         G                       |\n|                                 |\n|                 D               |\n|                                 |\n-----------------------------------\n ``` \n\nThe warehouse is a large rectangular structure, and you're currently outside its main entrance. There are numerous barrels and crates (not pictured) layered around the walls which could potentially offer places to hide or items of interest.\n\nPlease note, this is a very basic representation and a simplified version, as a textual medium can limit the level of detail and accuracy in an ASCII map.\n\nLet me know what you both decide to do next!"
+        },
+        {
+            "role": "user",
+            "content": "Cade would like to search through the barrles and crates."
+        },
+        {
+            "role": "assistant",
+            "content": "Excellent, a thorough adventurer leaves no stone unturned. Cade, please roll a D20 for Investigation to determine the outcome of your search. Add your Intelligence modifier and any proficiency bonus you might have. Let's find out what these barrels and crates hold!"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls a 2"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 2 plus his Intelligence modifier and potential proficiency bonus, Cade rummages through the barrels and crates. However, perhaps due to the dim light or distraction from the recent skirmish, he doesn't seem to find anything of immediate value or interest. \n\nThe barrels hold typical warehouse goods: grains, dried fish, cheap cloth, and similar mundane items. None of it seems particularly useful or valuable under these circumstances. The crates appear to be more of the same.\n\nHopefully, this won't deter you. What would you both like to do next? Attempt to enter the warehouse, or maybe Cheba would like to try searching as well?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba will search the crates and barrles too"
+        },
+        {
+            "role": "assistant",
+            "content": "Perfect, two pairs of eyes are often better than one! Cheba, please roll a D20 and add your Intelligence modifier along with your proficiency bonus, if applicable. We'll see if you turn up anything that Cade might have missed on his search. Let me know what you roll."
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolls a 3"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 3 plus her Intelligence modifier, Cheba too finds herself struggling to discern anything of interest amongst the crates and barrels. Much like Cade, she only finds commonplace warehouse goods: dried goods, low-quality textiles, and other unremarkable items. The search doesn't yield anything further.\n\nIt appears these containers hold nothing more than the daily essentials of a busy port city. Your search of the exterior seems exhausted. \n\nRemember, you still have the interior of the warehouse to explore, and who knows what you might find there? What do you want to do next, adventurers?"
+        },
+        {
+            "role": "user",
+            "content": "Cade would like to eat some of the dried fish and then study the map of waterdeep that he found on one of the guards."
+        },
+        {
+            "role": "assistant",
+            "content": "Certainly! Cade pulls out a small portion of the dried fish from one of the barrels and snacks on it; it's not exactly a feast, but it's nourishing enough for now.\n\nAfter he finishes, he unfurls the map of Waterdeep he'd found earlier on the guard. It's relatively well-detailed, depicting important city landmarks, main roads, and various districts. There are a few annotations, but nothing that points directly to the warehouse or any other suspicious activity at first glance.\n\nIf there's something particular Cade's looking for, he can roll an Investigation check to study the map in more depth. Or are there other activities you wish to undertake? Cheba, what would you like to do?"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls a nat 20 for the investigation check of the map."
+        },
+        {
+            "role": "assistant",
+            "content": "With a natural 20, Cade's attentive gaze finds a detail that could have easily been overlooked.\n\nThere is an inconspicuous mark on the map, sketched near the warehouse you're investigating. Accompanying it is a scribbled note: \"Midnight \u2013 The Hawk.\"\n\nThe meaning of the note is not readily apparent, but it could well be crucial information. The rest of the city layout is well represented, which could be useful in future navigation.\n\nCongratulations on the successful roll! A natural 20 always brings interesting outcomes.\n\nCheba, did you have any actions you'd like to undertake? Or do you both want to proceed into the warehouse now?"
+        },
+        {
+            "role": "user",
+            "content": "What time of day is it? Cheba wants to listen for sounds upstairs"
+        },
+        {
+            "role": "assistant",
+            "content": "It's late evening, the sun has set and darkness has creeped in. A few stars have begun to twinkle faintly in the night sky. Although it's not midnight yet, it's certainly getting closer. Probably still a couple hours away.\n\nCheba quiets her breath and strains her ears, paying attention to the sounds coming from the warehouse, particularly anything that might suggest activity in the upper level. \n\nMake a Perception check for Cheba, please. Roll a D20 and add your Wisdom modifier along with any proficiency bonus, if applicable. Let me know what you roll!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolls a 2"
+        },
+        {
+            "role": "assistant",
+            "content": "Unfortunately, with a roll of 2 plus her Wisdom modifier, the ambient noise of the seagulls and the waves lapping against the dock make it hard for Cheba to discern any distinct sounds coming from the warehouse. The upper level seems quiet, but it's hard to say for certain.\n\nCade, in the meantime, can't help but glance back at the ominous \"Midnight \u2013 The Hawk\" note, the cryptic message lingering in his thoughts.\n\nThe warehouse looms ahead, its contents still a mystery. What would you like to do next? Maybe Cade could try to listen for sounds within the warehouse, or perhaps you're ready to venture inside?"
+        },
+        {
+            "role": "user",
+            "content": "We both sneak inside the warehouse."
+        },
+        {
+            "role": "assistant",
+            "content": "Preparing to enter the warehouse, Cade and Cheba move quietly and carefully, wary of not alerting anyone who might be inside.\n\nPlease roll a D20 for Stealth for both Cade and Cheba. Add your Dexterity modifier and any proficiency bonus you might have. Remember, the aim is to be as silent as possible while entering the building. Let me know your rolls!"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolls a 14 and Cade rolls a 13"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 14 for Cheba and 13 for Cade, plus any respective Dexterity modifiers, both of you manage to open the door without causing too much noise and slip unnoticed inside the warehouse.\n\nAs soon as you step in, you're met by the smell of damp wood and sea salt. The warehouse is dimly lit, the sparse light from outside barely illuminates the towering crates and barrels stacked around. There are walkways above, and you can see a flight of wooden stairs leading upwards on your left.\n\nBesides the soft creaking of the old building and the distant sounds of the harbor, everything else is quiet. So far, it seems no one has noticed your entrance. \n\nWhat would you like to do next? Explore the ground floor, climb upstairs, or maybe inspect the crates within the warehouse?"
+        },
+        {
+            "role": "user",
+            "content": "Is the second floor lit? Can we see anything up there? Cade will search the crates in the warehouse."
+        },
+        {
+            "role": "assistant",
+            "content": "From your position on the ground floor, it's hard to ascertain the lighting situation on the second floor. You can make out some shadowy forms, perhaps more stacked goods or machinery, but details are hard to come by due to the dim light filtering in from the ground level.\n\nWhile Cheba keeps a watchful eye out, Cade takes the opportunity to inspect the nearest crates. Please roll a D20 for Investigation, adding your Intelligence modifier and proficiency bonus to the result. \n\nLet's see what these crates contain. Please let me know the result of your roll!"
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls a 2"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 2 plus his Intelligence modifier, Cade attempts to search through nearby crates. However, maybe due to the dim light or perhaps the pressure to remain undetected, he doesn't find anything significant.\n\nThe crates seem to be filled with common warehouse goods - packages of dry food, bolts of cloth, and other mundane items. Nothing immediately stands out as unusual or out of place in a trade warehouse.\n\nDon't let the unsuccessful search deter you, there's still much of the warehouse left unexplored. What would you like to do next? Does Cheba want to attempt a search, or do you have other plans in mind?\n"
+        },
+        {
+            "role": "user",
+            "content": "Cheba will search the crates as well. She rolls a 19. Can you draw us an ascii map of the inside of the warehouse please"
+        },
+        {
+            "role": "assistant",
+            "content": "With a roll of 19, plus her Intelligence modifier, Cheba takes a closer look at the crates and spots a few details that Cade had overlooked. She finds a small crate cleverly hidden behind the others. Inside are a few interesting items - a pouch of 15 gold pieces, a set of well-made lock picks, and a small jeweled brooch. It appears someone has been stashing away valuable items in this obscure corner of the warehouse.\n\nBelow is an oversimplified ASCII sketch. The \"#\" represents the towering stacks of crates, \"C\" is Cade, and \"Ch\" is Cheba. \"E\" is the entrance, and \"S\" represents the stairs leading upstairs. \n\n``` \n-----------------------\n|      S              |\n|     ##              |\n|  C  ##              |\n|     ##              |\n|     ##         Ch   |\n|     ##              |\n|     ##              |\n|     E               |\n-----------------------\n```\n\nThe warehouse is quite large and multi-leveled, filled with high stacks of crates, barrels, and sacks. The stairs in the corner lead up to the second level, which seems to have walkways and another row of stacked goods, only dimly visible from your current position.\n\nWhat do you want to do next? Maybe go upstairs or try to figure out the significance of these found items?"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "user",
+            "content": "We updated our sheets with the loot we found. Cade will go upstaris and Cheba will cast light in the center of the room all the way up at the ceiling."
+        },
+        {
+            "role": "assistant",
+            "content": "Cade carefully approaches the wooden stairs, ready to ascend, while Cheba, making sure Cade has a clear sight ahead, reaches out her hand to the center of the room. She whispers a short incantation, and a soft, warm light begins to glow from a point in the air straight above them. The glow spreads and illuminates the warehouse, revealing more towering stacks of crates, the walkways above, and the intricate cobwebs that hang from the roof rafters. \n\nFrom the newfound light, both of you can see the second floor. It reveals more stacks of goods and a large open area. You notice a few crates moved and misplaced like someone scrambled them in a hurry. \n\nAs Cade starts his climb, I need him to make a Dexterity (Stealth) check to move silently and avoid any loose steps on the staircase. Also, make a Perception check once he reaches the top. Please roll the D20 and let me know the results, accounting for your respective ability modifiers and proficiencies."
+        },
+        {
+            "role": "user",
+            "content": "Cade rolls 8 for stealth check and a 16 for perception."
+        },
+        {
+            "role": "assistant",
+            "content": "Cade proceeds with caution, attempting to ascend the stairs as quietly as possible. Yet, despite his best efforts, he steps on a loose board that creaks loudly under his weight, his result of 8 not quite enough to avoid it. He freezes for a moment, listening intently for any sign that the noise has been heard, but there doesn't appear to be an immediate reaction.\n\nReaching the top of the staircase safely, he proceeds to survey the scene, his perception roll of 16 serving him well. The second floor looks much like the first, filled with crates and barrels of goods. Yet, amongst the general disarray, he spots something noteworthy \u2014 a piece of parchment peeking out from under a nearby crate.\n\nWhat would you like to do next? Proceed to examine the parchment? Or perhaps switch to Cheba and determine her next actions now that the warehouse is illuminated?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba comes upstairs and searches the crates. Cade will recover the parchment."
+        },
+        {
+            "role": "assistant",
+            "content": "As Cheba makes her way towards the stairs, Cade crouches down to retrieve the parchment. He unfolds it carefully, revealing a rough sketch of a ship and several notes in a language he doesn't recognize. Without comprehension of the text, the notes look like a set of instructions or perhaps a plan. The mysterious parchment could be of importance. \n\nMeanwhile, Cheba takes a careful look at the surrounding crates on the second level. Please roll a D20 for Investigation for Cheba. Let me know the roll result!\n\nWhat are your next steps? Does Cade have any idea about the language on the parchment? Maybe someone in your group is familiar with it?"
+        },
+        {
+            "role": "user",
+            "content": "Cheba rolls a 13 for investigation and Cheba knows several laguages, so she looks at the parchment to see if she can read it."
+        },
+        {
+            "role": "assistant",
+            "content": "With the roll of 13, plus her Intelligence modifier, Cheba begins to search through the crates on the upper level. She finds them to be mostly filled with commonplace trading goods: fabric, grains, a few bottles of cheap wine. Yet, in one crate, nestled beneath a layer of grain sacks, she finds a hidden compartment housing a small leather bound book, the sort favored by captains for log entries. It could contain valuable information.\n\nPassing the parchment to Cheba, Cade watches as she studies the notes. Cheba, knowing Common, Elvish, and Celestial, recognizes the script as Elvish. The hastily scribbled text is somewhat hard to decipher, but she manages to understand it with time. It appears to be a planned smuggling operation. The ship sketch indicates a drop-off point along the city docks and tonight's date.\n\nIt's possible that this warehouse is being used as a hub for illegal smuggling operations. The found parchment and Captains log could be vital pieces of evidence to stop it.\n\nWhat do you wish to do next? Do you want to dig deeper into the warehouse, bring these findings to the city watch, or have something else in mind?"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "user",
+            "content": "Hello DM, lets pick up where we left off"
         }
     ],
     "system_messages": [
         {
             "role": "system",
-            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial'}}"
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         },
         {
             "role": "system",
-            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n50exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n30gp\\n50exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\n30gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         }
     ],
     "last_milestone": [
         {
-            "role": "assistant",
-            "content": "Excellent, adventurers! Your character information has arrived. Let me quickly assess it.\n\nWe have:\n\n1. Cade the Elf Rogue - Level 1 with a well-equipped background as an Urchin. Quite an intriguing combination that set-ups for an engaging journey!\n    \n2. Cheba the Human Cleric - Level 1 too, with a devout background as an Acolyte. Now that adds an interesting dynamic to the duo!\n\nThis puts our average party level at 1. Just to confirm, does this sound correct to you?\n\nAlso, would you like to roll your own dice during the game, or shall I assume that responsibility for you?"
+            "role": "user",
+            "content": "!summary"
         },
         {
             "role": "user",
-            "content": "Sounds correct and please roll the dice for us"
+            "content": "We updated our sheets with the loot we found. Cade will go upstaris and Cheba will cast light in the center of the room all the way up at the ceiling."
         },
         {
             "role": "assistant",
-            "content": "Excellent! Then let's delve into this adventurous world, shall we? Given that each of you is at Level 1, I'll ensure that the encounters you face are appropriate for your abilities.\n\nAnd worry not, as the DUNGEON MASTER, I'm more than happy to take care of the dice rolling.\n\nOur story awaits now. So grab your gear, double-check those character sheets, and ready yourself for the unexpected... for such is the life of an adventurer in the realms of Dungeons and Dragons!\n\nBest of luck, brave adventurers Cade and Cheba! I look forward to seeing where your journey takes you. Let's proceed, shall we?"
+            "content": "Cade carefully approaches the wooden stairs, ready to ascend, while Cheba, making sure Cade has a clear sight ahead, reaches out her hand to the center of the room. She whispers a short incantation, and a soft, warm light begins to glow from a point in the air straight above them. The glow spreads and illuminates the warehouse, revealing more towering stacks of crates, the walkways above, and the intricate cobwebs that hang from the roof rafters. \n\nFrom the newfound light, both of you can see the second floor. It reveals more stacks of goods and a large open area. You notice a few crates moved and misplaced like someone scrambled them in a hurry. \n\nAs Cade starts his climb, I need him to make a Dexterity (Stealth) check to move silently and avoid any loose steps on the staircase. Also, make a Perception check once he reaches the top. Please roll the D20 and let me know the results, accounting for your respective ability modifiers and proficiencies."
         },
         {
             "role": "user",
-            "content": "Lets go!"
+            "content": "Cade rolls 8 for stealth check and a 16 for perception."
         },
         {
             "role": "assistant",
-            "content": "Under the cover of the twilight, your journey begins in the bustling city of Phandalin. The winding streets are quiet and the city is at peace. Both of you, Cade the Elf Rogue, and Cheba the Human Cleric, meet at the Stonehill Inn, a popular meeting spot for wanderers and adventurers like you. \n\nYou hear a rumor about a nearby goblin hideout that is rumored to contain a powerful artifact. While the artifact's nature remains unknown, it is believed that it can bring fortune and power to its possessor.\n\nAs you prepare to embark on this new adventure, you feel a mix of anticipation and determination. The challenge is suitable for your level, and the reward... potentially immense. \n\nYou decide to venture out first thing in the morning. As you rest for the night, I'll need you to make a perception check. Remember, I'll roll the dice for this check.\n\nLet's see what happens next, shall we? [Rolling Dice]"
+            "content": "Cade proceeds with caution, attempting to ascend the stairs as quietly as possible. Yet, despite his best efforts, he steps on a loose board that creaks loudly under his weight, his result of 8 not quite enough to avoid it. He freezes for a moment, listening intently for any sign that the noise has been heard, but there doesn't appear to be an immediate reaction.\n\nReaching the top of the staircase safely, he proceeds to survey the scene, his perception roll of 16 serving him well. The second floor looks much like the first, filled with crates and barrels of goods. Yet, amongst the general disarray, he spots something noteworthy \u2014 a piece of parchment peeking out from under a nearby crate.\n\nWhat would you like to do next? Proceed to examine the parchment? Or perhaps switch to Cheba and determine her next actions now that the warehouse is illuminated?"
         },
         {
             "role": "user",
-            "content": "ok"
+            "content": "Cheba comes upstairs and searches the crates. Cade will recover the parchment."
         },
         {
             "role": "assistant",
-            "content": "With my role as the DUNGEON MASTER, I roll the dice for you [Rolling Dice]\n\nSuddenly, there is a suspicious rustling at the edge of your camp. Having rolled high on your perception checks, you both notice it. Cade with his elven eyes notices a silhouette of a goblin lurking in the shadows and Cheba's heightened senses feel the unsettling aura.\n\nHow would you like to react to this? Remember, talk between yourselves, make a decision and then tell me what you would like to do."
+            "content": "As Cheba makes her way towards the stairs, Cade crouches down to retrieve the parchment. He unfolds it carefully, revealing a rough sketch of a ship and several notes in a language he doesn't recognize. Without comprehension of the text, the notes look like a set of instructions or perhaps a plan. The mysterious parchment could be of importance. \n\nMeanwhile, Cheba takes a careful look at the surrounding crates on the second level. Please roll a D20 for Investigation for Cheba. Let me know the roll result!\n\nWhat are your next steps? Does Cade have any idea about the language on the parchment? Maybe someone in your group is familiar with it?"
         },
         {
             "role": "user",
-            "content": "We scramble to our feet with weapons drawn ready to fight!"
+            "content": "Cheba rolls a 13 for investigation and Cheba knows several laguages, so she looks at the parchment to see if she can read it."
         },
         {
             "role": "assistant",
-            "content": "Excellent! Steely resolve shines in your eyes as you draw your weapons, ready for the unexpected conflict. The silhouette notices your ready stance, and with a shrill shriek that pierces the quiet night, the goblin launches itself towards you.\n\nIt looks like it's time for our first encounter. \n\nIn D&D 5th Edition, we initiate combat by determining who goes first, and for that, we make an initiative check. \n\nI will roll the dice to determine the order of turns. [Rolling Dice] Let's prepare for battle, shall we?"
-        },
-        {
-            "role": "user",
-            "content": "To battle"
-        },
-        {
-            "role": "assistant",
-            "content": "Indeed, to battle! The dice have been rolled for initiative. \n\nOur order of attack will be:\n\n1. Cade,\n2. Goblin,\n3. Cheba.\n\nLet our encounter begin!\n\nCade, you're up first. What would you like to do on your turn? Remember, you can take one action and move up to your speed. Your Rogue abilities offer you options such as attacking with your weapon, using a cunning action, or other general options. Choose wisely."
-        },
-        {
-            "role": "user",
-            "content": "Id like to throw one of my daggers at the goblin"
-        },
-        {
-            "role": "assistant",
-            "content": "Very well, Cade, you prepare to throw your dagger at the goblin. As a Rogue, you have proficiency in this type of weapon, so when you make an attack roll, you will be adding your proficiency bonus and your Dexterity modifier to the roll.\n\nLet me roll the dice to see if your attack hits [Rolling Dice]."
-        },
-        {
-            "role": "user",
-            "content": "Does it hit?"
-        },
-        {
-            "role": "assistant",
-            "content": "Apologies for the suspense, Cade. The dagger whistles through the air and finds its mark. You successfully manage to hit the Goblin. \n\nNow, let's calculate damage for your attack. The damage for a thrown dagger is 1d4 + your Dexterity modifier, plus any other bonuses you might have. Allow me to roll for damage [Rolling Dice]. "
-        },
-        {
-            "role": "user",
-            "content": "How much dmg was it?"
-        },
-        {
-            "role": "assistant",
-            "content": "Searing through the air, your dagger strikes true, and the goblin shrieks as it digs into its flesh. You deal [Rolling Dice] points of damage. Well done, Cade! \n\nNow, the goblin, wounded and enraged, turns its attention to you. Its beady eyes glaring maliciously, it hisses and charges at you with its scimitar drawn.\n\nNow, it's Cheba's turn. Cheba, with your accrued knowledge as a Cleric, you have numerous options at your disposal. What would you like to do?"
-        },
-        {
-            "role": "user",
-            "content": "What spells does Cheba have?"
-        },
-        {
-            "role": "assistant",
-            "content": "As a Level 1 Cleric, Cheba has access to a variety of Cleric spells. The exact spells would depend on the chosen divine domain and the Wisdom modifier, but typically, a level 1 Cleric has access to:\n\nCantrips (at will): \n1. Light \n2. Sacred Flame \n3. Thaumaturgy \n\n1st level spells (limited slots per day): \n1. Cure Wounds \n2. Guiding Bolt \n3. Sanctuary \n\nClerics also have the ability to prepare different spells after each long rest, choosing from the entire Cleric spell list, so there may be other spells at their disposal. However, the above are often chosen ones.\n\nCheba, which spell or action do you prefer to use against the goblin?"
+            "content": "With the roll of 13, plus her Intelligence modifier, Cheba begins to search through the crates on the upper level. She finds them to be mostly filled with commonplace trading goods: fabric, grains, a few bottles of cheap wine. Yet, in one crate, nestled beneath a layer of grain sacks, she finds a hidden compartment housing a small leather bound book, the sort favored by captains for log entries. It could contain valuable information.\n\nPassing the parchment to Cheba, Cade watches as she studies the notes. Cheba, knowing Common, Elvish, and Celestial, recognizes the script as Elvish. The hastily scribbled text is somewhat hard to decipher, but she manages to understand it with time. It appears to be a planned smuggling operation. The ship sketch indicates a drop-off point along the city docks and tonight's date.\n\nIt's possible that this warehouse is being used as a hub for illegal smuggling operations. The found parchment and Captains log could be vital pieces of evidence to stop it.\n\nWhat do you wish to do next? Do you want to dig deeper into the warehouse, bring these findings to the city watch, or have something else in mind?"
         },
         {
             "role": "user",
@@ -206,7 +830,7 @@
         },
         {
             "role": "system",
-            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nPet rat\\nToken of my parents\\nCommon clothes\\n10gp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '10', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\n15gp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         }
     ]
 }

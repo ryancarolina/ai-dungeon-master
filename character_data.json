@@ -4,7 +4,7 @@
         "Race": "Elf",
         "Class": "Rogue",
         "Level": "1",
-        "AC": "10",
+        "AC": "13",
         "HP": "10",
         "Strength": "12",
         "Dexterity": "15",
@@ -32,14 +32,14 @@
             "Stealth (Dex)": "4",
             "Survival (Wis)": "2"
         },
-        "Notes": "2 short swords\nBurglars pack\nLeather armor\nTwo daggers\nThieves tools\nSmall knife\nMap of the city I grew up in\nPet rat\nToken of my parents\nCommon clothes\n10gp\n\nBackgroun: Urchin\nLanguages: Common, Elvish"
+        "Notes": "2 short swords\nBurglars pack\nLeather armor\nTwo daggers\nThieves tools\nSmall knife\nMap of the city I grew up in\nMap of Waterdeep from guard\nPet rat\nToken of my parents\nCommon clothes\nwell-made lock picks\n20gp\n50exp\n\nBackgroun: Urchin\nLanguages: Common, Elvish\n\n**NOTES**\nEdge of dock ward."
     },
     "1": {
         "Name": "Cheba",
         "Race": "Human",
         "Class": "Cleric",
         "Level": "1",
-        "AC": "10",
+        "AC": "16",
         "HP": "10",
         "Strength": "13",
         "Dexterity": "17",
@@ -67,6 +67,6 @@
             "Stealth (Dex)": "",
             "Survival (Wis)": ""
         },
-        "Notes": "Warhammer\nChain mail\nLight crossbow\n20 bolts\nPriests pack\nShield\nHoly symbol\nPrayer book\n5 sticks of incense\nVestments\nCommon clothes\n15gp\n\nBackground: Acolyte\nLanguages: Common, Elvish, Celestial\nSpells:\nCantrips(at will): \n1. Light \n2. Sacred Flame \n3. Thaumaturgy \n\n1st level spells: \n1. Cure Wounds \n2. Guiding Bolt \n3. Sanctuary"
+        "Notes": "Warhammer\nChain mail\nLight crossbow\n20 bolts\nPriests pack\nShield\nHoly symbol\nPrayer book\n5 sticks of incense\nVestments\nCommon clothes\nSmall iron key\nSmall jeweled brooch\n45gp\n125exp\n\nBackground: Acolyte\nLanguages: Common, Elvish, Celestial\nSpells:\nCantrips(at will): \n1. Light \n2. Sacred Flame \n3. Thaumaturgy \n\n1st level spells: \n1. Cure Wounds \n2. Guiding Bolt \n3. Sanctuary"
     }
 }

@@ -63,6 +63,8 @@ def speak():
         text = speech_queue.get()  # Get text from the queue
         if text == "STOP":
             break  # Exit the loop if the text is "STOP"
+        if text.startswith("[SKIP_TTS]"):
+            continue  # Skip this iteration, don't read this text
         engine.say(text)
         engine.runAndWait()
         
@@ -109,13 +111,17 @@ def handle_entry(event):
         # Now get the DM's response using your existing logic, using relevant_messages instead of messages
         if relevant_messages:
             try:
-                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages)
+                chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=relevant_messages)
             except Exception as e:
                 text_area.insert(tk.END, f"An error occurred: {e}\n")
                 return  # exit the function early if there's an error
 
             # Extract the DM's reply from the chat object
             dm_response = chat.choices[0].message.content
+            
+            # Check if the DM's reply contains ASCII art and tag it if it does
+        if "_____________________" in dm_response:  # or any other identifier for ASCII art
+            dm_response = "[SKIP_TTS]" + dm_response
 
             # Save the DM's reply to the session data
             simple_session_manager.add_message({"role": "assistant", "content": dm_response})  # <-- Added line
