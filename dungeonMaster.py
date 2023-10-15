@@ -8,6 +8,7 @@ import threading
 import queue
 from CharacterManager import CharacterManager
 from SimpleSessionManager import SimpleSessionManager
+from tkinter import PhotoImage
 
 
 
@@ -22,10 +23,37 @@ engine = pyttsx3.init()
 
 # Create the main window
 window = tk.Tk()
-window.title("Dungeon Master")
+window.title("Gauntlets and Goblins")
+
+# Explicitly set the Tkinter window size
+window_width = 900  # You can set this to any value you want
+window_height = 700  # You can set this to any value you want
+window.geometry(f"{window_width}x{window_height}")
+
+# Load the startup graphic
+startup_image = PhotoImage(file="ggTitle.png")
+
+# Calculate aspect ratios
+window_aspect = window_width / window_height
+image_aspect = startup_image.width() / startup_image.height()
+
+# Determine the zoom factors
+if window_aspect > image_aspect:
+    # Window is wider than image
+    zoom_factor = window_width / startup_image.width()
+else:
+    # Window is taller than image
+    zoom_factor = window_height / startup_image.height()
+
+# Use the zoom factor to resize the image
+startup_image = startup_image.zoom(int(round(zoom_factor)), int(round(zoom_factor)))
+
+# Create the label and place the image
+startup_label = tk.Label(window, image=startup_image)
+startup_label.place(x=0, y=0, relwidth=1, relheight=1)  # Cover the whole window
 
 # Set a minimum window size (width x height)
-window.minsize(400, 300)
+window.minsize(800, 600)
 
 # Set background color to a dark gray to resemble dungeon tiles
 window.configure(bg='#2E2E2E')
@@ -101,7 +129,7 @@ def handle_entry(event):
 
         # Acknowledge the summary command without contacting the AI DM
         acknowledgment = "Summary data updated."
-        text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+        text_area.insert(tk.END, "GM: ", 'dm_tag')  # colored "DM:"
         text_area.insert(tk.END, f"{acknowledgment}\n\n")  # acknowledgment message
         return  # Exit early as no further processing is needed
     else:
@@ -118,7 +146,7 @@ def handle_entry(event):
 
                 simple_session_manager.add_message({"role": "assistant", "content": dm_response})
 
-                text_area.insert(tk.END, "DM: ", 'dm_tag')  # colored "DM:"
+                text_area.insert(tk.END, "GM: ", 'dm_tag')  # colored "DM:"
                 text_area.insert(tk.END, f"{dm_response}\n\n")  # DM's message
 
                 text_area.see(tk.END)
@@ -128,21 +156,31 @@ def handle_entry(event):
                 text_area.insert(tk.END, f"An error occurred: {e}\n")
         else:
             text_area.insert(tk.END, "No messages to process.\n")
+            
+# Function to handle text entry and keep the startup image
+def handle_entry_and_keep_image(event):
+    handle_entry(event)
 
-
-# Bind the Enter key to the handle_entry function
-input_field.bind("<Return>", handle_entry)
+# Bind the Enter key
+input_field.bind("<Return>", handle_entry_and_keep_image)
 
 # Use the instance to create or open character sheets
 for i in range(6):
     button = tk.Button(window, text=f"Player {i + 1} Character Sheet", command=lambda i=i: character_manager.create_or_open_character_sheet(i), bg='#2E2E2E', fg='#FFFFFF', font=custom_font)
     button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
-    
-def on_closing():
-    speech_queue.put("STOP")  # Add "STOP" to the queue to exit the text-to-speech loop
-    window.destroy()  # Destroy the Tkinter window
 
-window.protocol("WM_DELETE_WINDOW", on_closing)  # Set the on_closing function to be called when the window is closed
+# Set weight and minimum size for rows and columns
+window.grid_rowconfigure(0, weight=1, minsize=200)  # Text frame
+window.grid_rowconfigure(1, weight=0, minsize=100)  # Input field
+window.grid_rowconfigure(2, weight=0, minsize=50)  # Submit button
+
+# Set weight and minimum size for the rows containing the buttons
+for i in range(3, 9):  # Loop through the rows where buttons are placed (3 to 8)
+    window.grid_rowconfigure(i, weight=0, minsize=50)
+
+# Set weight for the column
+window.grid_columnconfigure(0, weight=1)
 
 # Run the Tkinter event loop
 window.mainloop()
+

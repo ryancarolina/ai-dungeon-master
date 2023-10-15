@@ -2,71 +2,51 @@
     "messages": [
         {
             "role": "system",
-            "content": "In the conversation, the players discuss characters and receive instructions. They set up camp in the forest and spot goblins. Cade plans a sneak attack but is compromised by a loud noise. Cheba's sanctuary spell protects herself instead of Cade, momentarily confusing the goblins. Cade attacks a goblin with his shortsword, while Cheba creates a bright flash of light. Cade's attack misses, and the goblins retaliate."
-        },
-        {
-            "role": "user",
-            "content": "You should roll for all monsters and NPCs. Also based on initiative order, cheba should have acted before cade right?"
+            "content": "Cade successfully executes a sneak attack on a goblin, while Cheba uses the Sanctuary spell to protect herself. The goblins become disoriented and one is knocked unconscious. The players have the advantage as it is now the goblins' turn."
         },
         {
             "role": "assistant",
-            "content": "I apologize for my mistake, you're right. In combat, each participant gets a turn in initiative order, and it was Cheba's turn before Cade's based on the initiative rolls.\n\nAlso, as the Dungeon Master, I should indeed roll for the opponents. Let's fix that.\n\nThe first goblin, snapping out of its disorientation, lunges back at Cade in retaliation. I will now refer to my dice to see if it manages to get past Cade's defenses. At the same time, the second and third goblin, recovering from their initial shock, charge towards Cheba.\n\nLet's see how these actions unfold."
+            "content": "After the goblins' failed attack and the successful actions by Cade and Cheba, it is now the players' turn again. They can choose their next actions against the disoriented goblins."
         },
         {
             "role": "user",
-            "content": "We are ready!"
-        },
-        {
-            "role": "assistant",
-            "content": "Thank you. Let's see how this unfolds.\n\nThe three goblins recovered from their initial shock make their move. The first goblin lunges at Cade with its crudely sharp weapon. However, with Cade's nimble dexterity and a bit of luck, the goblin's attack misses its mark.\n\nMeanwhile, the second and third goblins charge towards Cheba, bearing down on her with all their might. Cheba, sandwiched between the two, raises her warhammer in defense. Yet, the goblins seem to be thrown off by the deafening chaos of crow sounds and their lack of coordination causes them to miss Cheba entirely.\n\nFinally, the fourth Goblin, from the back, hurls the rock towards you. It whizzes past your group, missing everyone, and clatters harmlessly to the ground, testament to the poor aim of the goblin.\n\nIt's back to Cheba and Cade. What are your next moves?"
+            "content": "We the players get to roll our own dice correct?"
         },
         {
             "role": "user",
-            "content": "Did sanctuary protect Cheba just now? Cade will attempt to hide. Cheba will wait."
+            "content": "Pick up where we left off please"
         },
         {
             "role": "assistant",
-            "content": "Yes, indeed! Cheba\u2019s Sanctuary spell played a part in thwarting the goblins attacking her. Their swings were aimless, almost as if some divine force was swaying them off the mark.\n\nNow, Cade, being the savvy rogue he is, decides to use this opportunity to meld into the environment. The woods around provide ample spots to hide. \n\nCheba decides to hold on and prepare herself mentally for the next spell or heal her allies might need.\n\nPlease roll a d20 + Cade's Stealth skill modifier to see if he manages to hide successfully without the goblins noticing."
+            "content": "Of course, it is the player's turn now. Cade, from his hidden position, has just successfully taken down one goblin. Meanwhile, Cheba has unleashed a burst of light with Thaumaturgy, disorienting the remaining two goblins. What are your next moves?"
         },
         {
             "role": "user",
-            "content": "Cade rolls 5"
+            "content": "Cade will sneak attack one of the goblins that is blinded."
         },
         {
             "role": "assistant",
-            "content": "Cade quickly ducks behind a nearby bush, trying to take shelter among its thick leaves. Despite his best efforts, the rustle of the foliage is a bit louder than he intended, causing the goblins to glance over curiously. It's uncertain if they have seen Cade or if they're just drawn to the strange noise. \n\nMeanwhile, Cheba is holding her spot, her mind focused, the divine energy around her providing a protective shield. She waits for the right moment to strike or provide support.\n\nThe situation changes as the goblins are now aware of something odd. What are they going to do? Let's find out."
+            "content": "Absolutely, Cade can use this opportunity to try and sneak attack one of the disoriented goblins. With their senses still recovering from Cheba's Thaumaturgy spell, they won't see him coming. It's the perfect time for a strike."
         },
         {
             "role": "user",
-            "content": "Cade will attempt to hide again. Cheba will continue to wait."
-        },
-        {
-            "role": "assistant",
-            "content": "Noticing that the goblins seem suspicious, Cade makes another attempt to stealthily slip deeper into the shadows, using a bigger foliage for cover this time.\n\nCheba, her hold on her divine energy unwavering, continues to wait, ready to counter whenever necessary.\n\nCade, please roll a d20 + your Stealth skill modifier to see if you manage to successfully slip away this time."
+            "content": "Can I roll my attack?"
         },
         {
             "role": "user",
-            "content": "Cade rolls 13"
+            "content": "!summar"
         },
         {
             "role": "assistant",
-            "content": "With renewed focus, Cade quickly and stealthily moves to another hiding spot. The goblins, still blinking from the previous flash of light, aren't able to catch anything more than some minor rustling of leaves, leaving them in confusion. It seems that Cade has successfully hidden from the prying eyes of the goblins this time. \n\nCheba stands her ground, her hands quietly tightening around her holy symbol, ready to call upon the divine energy when the time comes.\n\nIt seems that the table has turned, and Cade now has the option of a surprise attack. What are your next actions?"
+            "content": "Sure. The players' characters, Cade and Cheba, set up camp in the forest and plan a surprise attack on the goblins. After a loud noise compromises their position, Cheba casts a sanctuary spell, causing the goblins to hesitate in their attack. Cade capitalizes on this and lands a successful sneak attack on one of the goblins. This, followed by a flash of light from Cheba's Thaumaturgy spell, leaves the remaining goblins disoriented. With one goblin already down, Cade prepares for another sneak attack on the confused goblins."
         },
         {
             "role": "user",
-            "content": "Do the goblins get to take an action?"
+            "content": ""
         },
         {
             "role": "assistant",
-            "content": "Wow! My apologies, I was caught in the excitement of the action. It is indeed the goblins' turn. Let's see how they react to the confusing situation.\n\nThe goblins are clearly flustered now. Unable to spot Cade, two of them instinctively huddle close, their beady eyes scanning the underbrush fearfully. The remaining goblins, unable to decide how to proceed in the face of this anomaly, shift their focus towards Cheba, unaware of the divine protection around her.\n\nTwo goblins aim shakily and throw their rusty short swords towards Cheba, while the last one, still shocked by the sudden disappearance, stays back, readying a rock to throw towards the area where Cade disappeared. Let's roll to determine the results."
-        },
-        {
-            "role": "user",
-            "content": "ok"
-        },
-        {
-            "role": "assistant",
-            "content": "The first goblin, mustering up courage, flings his short sword at Cheba with a grunt. However, the Sanctuary spells proves its worth again as the sword suddenly veers off right before impacting, clattering against a nearby tree harmlessly.\n\nThe second goblin, also aiming at Cheba, hesitates for a moment, visibly discomforted by what just happened to his companion's attack. Nonetheless, he lets out a disgruntled yelp and throws his weapon. It too deviates inexplicably mid-air and skids harmlessly onto the forest floor.\n\nMeanwhile, the third goblin, at a loss on how to handle the situation, throws his rock into the bush where Cade disappeared. Due to poor aim or sheer bad luck, the rock hits a tree trunk and bounces back, nearly hitting the goblin himself.\n\nThe goblins are now visibly shaken, and their numbers seem less threatening than before. Cade, unseen, stands ready. What are your next actions?"
+            "content": "Of course, you can roll your own attack. This will determine the outcome of Cade's sneak attack on one of the blinded goblins. Good luck!"
         },
         {
             "role": "user",
@@ -85,44 +65,52 @@
         {
             "role": "system",
             "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         }
     ],
     "last_milestone": [
         {
+            "role": "user",
+            "content": "Pick up where we left off please"
+        },
+        {
             "role": "assistant",
-            "content": "Cade quickly ducks behind a nearby bush, trying to take shelter among its thick leaves. Despite his best efforts, the rustle of the foliage is a bit louder than he intended, causing the goblins to glance over curiously. It's uncertain if they have seen Cade or if they're just drawn to the strange noise. \n\nMeanwhile, Cheba is holding her spot, her mind focused, the divine energy around her providing a protective shield. She waits for the right moment to strike or provide support.\n\nThe situation changes as the goblins are now aware of something odd. What are they going to do? Let's find out."
+            "content": "Of course, it is the player's turn now. Cade, from his hidden position, has just successfully taken down one goblin. Meanwhile, Cheba has unleashed a burst of light with Thaumaturgy, disorienting the remaining two goblins. What are your next moves?"
         },
         {
             "role": "user",
-            "content": "Cade will attempt to hide again. Cheba will continue to wait."
+            "content": "Cade will sneak attack one of the goblins that is blinded."
         },
         {
             "role": "assistant",
-            "content": "Noticing that the goblins seem suspicious, Cade makes another attempt to stealthily slip deeper into the shadows, using a bigger foliage for cover this time.\n\nCheba, her hold on her divine energy unwavering, continues to wait, ready to counter whenever necessary.\n\nCade, please roll a d20 + your Stealth skill modifier to see if you manage to successfully slip away this time."
+            "content": "Absolutely, Cade can use this opportunity to try and sneak attack one of the disoriented goblins. With their senses still recovering from Cheba's Thaumaturgy spell, they won't see him coming. It's the perfect time for a strike."
         },
         {
             "role": "user",
-            "content": "Cade rolls 13"
-        },
-        {
-            "role": "assistant",
-            "content": "With renewed focus, Cade quickly and stealthily moves to another hiding spot. The goblins, still blinking from the previous flash of light, aren't able to catch anything more than some minor rustling of leaves, leaving them in confusion. It seems that Cade has successfully hidden from the prying eyes of the goblins this time. \n\nCheba stands her ground, her hands quietly tightening around her holy symbol, ready to call upon the divine energy when the time comes.\n\nIt seems that the table has turned, and Cade now has the option of a surprise attack. What are your next actions?"
+            "content": "Can I roll my attack?"
         },
         {
             "role": "user",
-            "content": "Do the goblins get to take an action?"
+            "content": "!summar"
         },
         {
             "role": "assistant",
-            "content": "Wow! My apologies, I was caught in the excitement of the action. It is indeed the goblins' turn. Let's see how they react to the confusing situation.\n\nThe goblins are clearly flustered now. Unable to spot Cade, two of them instinctively huddle close, their beady eyes scanning the underbrush fearfully. The remaining goblins, unable to decide how to proceed in the face of this anomaly, shift their focus towards Cheba, unaware of the divine protection around her.\n\nTwo goblins aim shakily and throw their rusty short swords towards Cheba, while the last one, still shocked by the sudden disappearance, stays back, readying a rock to throw towards the area where Cade disappeared. Let's roll to determine the results."
+            "content": "Sure. The players' characters, Cade and Cheba, set up camp in the forest and plan a surprise attack on the goblins. After a loud noise compromises their position, Cheba casts a sanctuary spell, causing the goblins to hesitate in their attack. Cade capitalizes on this and lands a successful sneak attack on one of the goblins. This, followed by a flash of light from Cheba's Thaumaturgy spell, leaves the remaining goblins disoriented. With one goblin already down, Cade prepares for another sneak attack on the confused goblins."
         },
         {
             "role": "user",
-            "content": "ok"
+            "content": ""
         },
         {
             "role": "assistant",
-            "content": "The first goblin, mustering up courage, flings his short sword at Cheba with a grunt. However, the Sanctuary spells proves its worth again as the sword suddenly veers off right before impacting, clattering against a nearby tree harmlessly.\n\nThe second goblin, also aiming at Cheba, hesitates for a moment, visibly discomforted by what just happened to his companion's attack. Nonetheless, he lets out a disgruntled yelp and throws his weapon. It too deviates inexplicably mid-air and skids harmlessly onto the forest floor.\n\nMeanwhile, the third goblin, at a loss on how to handle the situation, throws his rock into the bush where Cade disappeared. Due to poor aim or sheer bad luck, the rock hits a tree trunk and bounces back, nearly hitting the goblin himself.\n\nThe goblins are now visibly shaken, and their numbers seem less threatening than before. Cade, unseen, stands ready. What are your next actions?"
+            "content": "Of course, you can roll your own attack. This will determine the outcome of Cade's sneak attack on one of the blinded goblins. Good luck!"
         },
         {
             "role": "user",
