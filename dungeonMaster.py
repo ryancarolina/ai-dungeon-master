@@ -62,7 +62,7 @@ window.configure(bg='#2E2E2E')
 custom_font = tkFont.Font(family="Helvetica", size=12)
 
 # Create a frame to hold the text area and the scrollbar
-text_frame = tk.Frame(window)
+text_frame = tk.Frame(window, bg='#2E2E2E')  # <-- Add bg here
 text_frame.grid(column=0, row=0, padx=10, pady=10, sticky='nsew')
 
 # Create a scrollable text display area
@@ -70,9 +70,8 @@ text_area = tk.Text(text_frame, wrap=tk.WORD, bg='#2E2E2E', fg='#FFFFFF', font=c
 text_area.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 # Create a scrollbar and attach it to text_area
-scrollbar = tk.Scrollbar(text_frame, command=text_area.yview)
+scrollbar = tk.Scrollbar(text_frame, command=text_area.yview, bg='#2E2E2E')  # <-- Add bg here
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-text_area['yscrollcommand'] = scrollbar.set
 
 # Create a multi-line text input field
 input_field = tk.Text(window, width=40, height=4, bg='#2E2E2E', fg='#FFFFFF', font=custom_font)

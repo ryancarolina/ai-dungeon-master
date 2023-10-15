@@ -2,23 +2,7 @@
     "messages": [
         {
             "role": "system",
-            "content": "Cade successfully executes a sneak attack on a goblin, while Cheba uses the Sanctuary spell to protect herself. The goblins become disoriented and one is knocked unconscious. The players have the advantage as it is now the goblins' turn."
-        },
-        {
-            "role": "assistant",
-            "content": "After the goblins' failed attack and the successful actions by Cade and Cheba, it is now the players' turn again. They can choose their next actions against the disoriented goblins."
-        },
-        {
-            "role": "user",
-            "content": "We the players get to roll our own dice correct?"
-        },
-        {
-            "role": "user",
-            "content": "Pick up where we left off please"
-        },
-        {
-            "role": "assistant",
-            "content": "Of course, it is the player's turn now. Cade, from his hidden position, has just successfully taken down one goblin. Meanwhile, Cheba has unleashed a burst of light with Thaumaturgy, disorienting the remaining two goblins. What are your next moves?"
+            "content": "Cade successfully performs a sneak attack on a goblin, while Cheba uses Sanctuary spell to protect herself. One goblin is knocked unconscious and the players now have the advantage. The goblins' turn passes without success and it is now the players"
         },
         {
             "role": "user",
@@ -55,6 +39,10 @@
         {
             "role": "system",
             "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
         }
     ],
     "system_messages": [
@@ -73,17 +61,13 @@
         {
             "role": "system",
             "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         }
     ],
     "last_milestone": [
-        {
-            "role": "user",
-            "content": "Pick up where we left off please"
-        },
-        {
-            "role": "assistant",
-            "content": "Of course, it is the player's turn now. Cade, from his hidden position, has just successfully taken down one goblin. Meanwhile, Cheba has unleashed a burst of light with Thaumaturgy, disorienting the remaining two goblins. What are your next moves?"
-        },
         {
             "role": "user",
             "content": "Cade will sneak attack one of the goblins that is blinded."
@@ -111,6 +95,14 @@
         {
             "role": "assistant",
             "content": "Of course, you can roll your own attack. This will determine the outcome of Cade's sneak attack on one of the blinded goblins. Good luck!"
+        },
+        {
+            "role": "user",
+            "content": "!summary"
+        },
+        {
+            "role": "system",
+            "content": "Characters Summary: {'Player 1': {'Name': 'Cade', 'Race': 'Elf', 'Class': 'Rogue', 'Level': '1', 'AC': '13', 'HP': '10', 'Strength': '12', 'Dexterity': '15', 'Constitution': '14', 'Intelligence': '14', 'Wisdom': '15', 'Charisma': '13', 'Skills': {'Acrobatics (Dex)': '4', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '', 'Nature (Int)': '', 'Perception (Wis)': '1', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '', 'Sleight of Hand (Dex)': '4', 'Stealth (Dex)': '4', 'Survival (Wis)': '2'}, 'Notes': '2 short swords\\nBurglars pack\\nLeather armor\\nTwo daggers\\nThieves tools\\nSmall knife\\nMap of the city I grew up in\\nMap of Waterdeep from guard\\nPet rat\\nToken of my parents\\nCommon clothes\\nwell-made lock picks\\n20gp\\n50exp\\n\\nBackgroun: Urchin\\nLanguages: Common, Elvish\\n\\n**NOTES**\\nEdge of dock ward.'}, 'Player 2': {'Name': 'Cheba', 'Race': 'Human', 'Class': 'Cleric', 'Level': '1', 'AC': '16', 'HP': '10', 'Strength': '13', 'Dexterity': '17', 'Constitution': '14', 'Intelligence': '13', 'Wisdom': '15', 'Charisma': '15', 'Skills': {'Acrobatics (Dex)': '', 'Animal Handling (Wis)': '', 'Arcana (Int)': '', 'Athletics (Str)': '', 'Deception (Cha)': '', 'History (Int)': '', 'Insight (Wis)': '', 'Intimidation (Cha)': '', 'Investigation (Int)': '', 'Medicine (Wis)': '4', 'Nature (Int)': '', 'Perception (Wis)': '', 'Performance (Cha)': '', 'Persuasion (Cha)': '', 'Religion (Int)': '3', 'Sleight of Hand (Dex)': '', 'Stealth (Dex)': '', 'Survival (Wis)': ''}, 'Notes': 'Warhammer\\nChain mail\\nLight crossbow\\n20 bolts\\nPriests pack\\nShield\\nHoly symbol\\nPrayer book\\n5 sticks of incense\\nVestments\\nCommon clothes\\nSmall iron key\\nSmall jeweled brooch\\n45gp\\n125exp\\n\\nBackground: Acolyte\\nLanguages: Common, Elvish, Celestial\\nSpells:\\nCantrips(at will): \\n1. Light \\n2. Sacred Flame \\n3. Thaumaturgy \\n\\n1st level spells: \\n1. Cure Wounds \\n2. Guiding Bolt \\n3. Sanctuary'}}"
         },
         {
             "role": "user",

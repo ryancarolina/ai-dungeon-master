@@ -1,8 +1,10 @@
 import json
 import os
+from tkinter import PhotoImage
 import tkinter as tk
 from tkinter import ttk
 import tkinter.messagebox as messagebox
+from tkinter import filedialog
 
 class CharacterManager:
     skills_labels_text = [
@@ -45,7 +47,7 @@ class CharacterManager:
                 return False
         return True
 
-    def save_character(self, player_index, entries, skills_entries, notes_text):
+    def save_character(self, player_index, entries, skills_entries, notes_text, image_path):
         char_details = {
             'Name': entries[0].get(),
             'Race': entries[1].get(),
@@ -60,7 +62,8 @@ class CharacterManager:
             'Wisdom': entries[10].get(),
             'Charisma': entries[11].get(),
             'Skills': {skill_label: entry.get() for skill_label, entry in zip(self.skills_labels_text, skills_entries)},
-            'Notes': notes_text.get("1.0", tk.END).strip()
+            'Notes': notes_text.get("1.0", tk.END).strip(),
+            'Image': image_path
         }
         print(f"Saving data for player {player_index}: {char_details}")  # Debugging line
         self.character_data[str(player_index)] = char_details
@@ -73,31 +76,60 @@ class CharacterManager:
         player_index_str = str(player_index)
 
         character_sheet_window = tk.Toplevel()
+        character_sheet_window.configure(bg='#2E2E2E')
         character_sheet_window.title(f"Character Sheet {player_index + 1}")
 
         notebook = ttk.Notebook(character_sheet_window)
         notebook.pack(fill=tk.BOTH, expand=True)
 
-        core_stats_frame = ttk.Frame(notebook)
+        core_stats_frame = tk.Frame(notebook, bg='#2E2E2E')
         notebook.add(core_stats_frame, text="Core Stats")
 
         core_stats_labels_text = ["Name", "Race", "Class", "Level", "AC", "HP", "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]
+
+        # Load and display the character portrait image
+        original_portrait_image = PhotoImage(file="femaleElfBlonde.png")  # Replace with your image path
+        portrait_image = original_portrait_image.subsample(4, 4)  # Reduce size by half as an example
+        portrait_label = tk.Label(core_stats_frame, image=portrait_image, bg='#2E2E2E')
+        portrait_label.photo = portrait_image  # Keep a reference to avoid garbage collection
+        portrait_label.grid(row=0, column=2, rowspan=len(core_stats_labels_text))  # Adjust grid position
+
+        current_image_path = "femaleElfBlonde.png"  # Initialize with your default image path
+        
+        # Function to open file dialog and update portrait
+        def update_portrait():
+            nonlocal current_image_path
+            file_path = filedialog.askopenfilename(filetypes=[("PNG files", "*.png")])
+            if file_path:
+                new_image = PhotoImage(file=file_path)
+                new_image = new_image.subsample(4, 4)  # Resize the image
+                portrait_label.configure(image=new_image)
+                portrait_label.photo = new_image
+                current_image_path = file_path
+                self.save_character(player_index, entries, skills_entries, notes_text, file_path)  # Save the new image path
+
+        # Add button to update portrait
+        update_button = tk.Button(core_stats_frame, text="Update Portrait", command=update_portrait, bg='#2E2E2E', fg='#FFFFFF')
+        update_button.grid(row=0, column=3)  # Adjust grid position
+
         entries = []
         for i, text in enumerate(core_stats_labels_text):
-            tk.Label(core_stats_frame, text=f"{text}:").grid(row=i, column=0, sticky='e')
-            entry = tk.Entry(core_stats_frame)
+            tk.Label(core_stats_frame, text=f"{text}:", bg='#2E2E2E', fg='#FFFFFF').grid(row=i, column=0, sticky='e')
+            entry = tk.Entry(core_stats_frame, bg='#2E2E2E', fg='#FFFFFF', insertbackground='white')
             entry.grid(row=i, column=1)
             entries.append(entry)
 
-        skills_frame = ttk.Frame(notebook)
+
+        skills_frame = tk.Frame(notebook, bg='#2E2E2E')
         notebook.add(skills_frame, text="Skills")
 
         skills_entries = []  # Local variable to hold Entry widgets for skills
         for i, text in enumerate(self.skills_labels_text):
-            tk.Label(skills_frame, text=f"{text}:").grid(row=i, column=0, sticky='e')
-            entry = tk.Entry(skills_frame)
+            tk.Label(skills_frame, text=f"{text}:", bg='#2E2E2E', fg='#FFFFFF').grid(row=i, column=0, sticky='e')
+            entry = tk.Entry(skills_frame, bg='#2E2E2E', fg='#FFFFFF', insertbackground='white')
             entry.grid(row=i, column=1)
             skills_entries.append(entry)  # Keep track of entry fields for later use
+
 
         notes_text = tk.Text(character_sheet_window, width=40, height=10)
         notes_text.pack()
@@ -114,8 +146,15 @@ class CharacterManager:
             skills_data = self.character_data[player_index_str].get('Skills', {})
             for i, skill_label in enumerate(self.skills_labels_text):
                 skills_entries[i].insert(0, skills_data.get(skill_label, ''))
+                
+            # Load saved portrait if available
+            saved_image_path = self.character_data[player_index_str].get('Image', "femaleElfBlonde.png")  # Replace with your default image path
+            saved_image = PhotoImage(file=saved_image_path)
+            saved_image = saved_image.subsample(4, 4)  # Resize the image
+            portrait_label.configure(image=saved_image)
+            portrait_label.photo = saved_image
 
-        save_button = tk.Button(character_sheet_window, text="Save", command=lambda: self.save_character(player_index, entries, skills_entries, notes_text) if self.validate_entries(entries) else messagebox.showerror("Invalid Input", "Please enter valid numbers for Level, AC, HP, and ability scores."))
+        save_button = tk.Button(character_sheet_window, text="Save", command=lambda: self.save_character(player_index, entries, skills_entries, notes_text, current_image_path) if self.validate_entries(entries) else messagebox.showerror("Invalid Input", "Please enter valid numbers for Level, AC, HP, and ability scores."))
         save_button.pack()
         
     def get_summary_data(self):
