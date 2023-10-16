@@ -8,8 +8,8 @@ class SimpleSessionManager:
     openai.api_key = Config.API_KEY
     def __init__(self):
         self.session_data = None
-        if os.path.exists('session_data.json'):
-            with open('session_data.json', 'r') as file:
+        if os.path.exists('data/session_data.json'):
+            with open('data/session_data.json', 'r') as file:
                 self.session_data = json.load(file)
 
     def session_exists(self):
@@ -78,6 +78,7 @@ class SimpleSessionManager:
             return []
         
     def add_message(self, message):
+        print(f"Debug: Type of message['content'] = {type(message['content'])}")
         print("Debug: add_message is called.")  # Debug statement 1
         self.session_data['messages'].append(message)
         print(f"Debug: Message added: {message}")  # Debug statement 2
@@ -106,13 +107,13 @@ class SimpleSessionManager:
         return self.session_data['system_messages']
 
     def clear_session(self):
-        if os.path.exists('session_data.json'):
-            os.remove('session_data.json')
+        if os.path.exists('data/session_data.json'):
+            os.remove('data/session_data.json')
         self.session_data = None
 
     def save_session(self):
 
-        with open('session_data.json', 'w') as file:
+        with open('data/session_data.json', 'w') as file:
             json.dump(self.session_data, file, indent=4)
             
     def get_oldest_messages(self, num_messages=5):

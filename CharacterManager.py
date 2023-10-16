@@ -25,20 +25,20 @@ class CharacterManager:
         
     def save_character_data(self):
         try:
-            with open('character_data.json', 'w') as file:
+            with open('data/character_data.json', 'w') as file:
                 json.dump(self.character_data, file, indent=4)
             print("Data saved successfully")  # Debugging line
-            print(os.path.abspath('character_data.json'))
+            print(os.path.abspath('data/character_data.json'))
         except Exception as e:
             print(f"Error saving character data: {e}")
 
     def load_character_data(self):
         try:
-            if os.path.exists('character_data.json'):
-                with open('character_data.json', 'r') as file:
+            if os.path.exists('data/character_data.json'):
+                with open('data/character_data.json', 'r') as file:
                     self.character_data = json.load(file)
                 print(f"Data loaded successfully: {self.character_data}")  # Debugging line
-                print(os.path.abspath('character_data.json'))
+                print(os.path.abspath('data/character_data.json'))
         except Exception as e:
             print(f"Error loading character_data: {e}")
 
@@ -107,7 +107,7 @@ class CharacterManager:
         portrait_label.photo = portrait_image  # Keep a reference to avoid garbage collection
         portrait_label.grid(row=0, column=2, rowspan=len(core_stats_labels_text))  # Adjust grid position
 
-        current_image_path = "art\femaleElfBlonde.png"  # Initialize with your default image path
+        current_image_path = "art/femaleElfBlonde.png"  # Initialize with your default image path
         
         # Function to open file dialog and update portrait
         def update_portrait():
@@ -161,7 +161,7 @@ class CharacterManager:
                 skills_entries[i].insert(0, skills_data.get(skill_label, ''))
                 
             # Load saved portrait if available
-            saved_image_path = self.character_data[player_index_str].get('Image', "art\femaleElfBlonde.png")  # Replace with your default image path
+            saved_image_path = self.character_data[player_index_str].get('Image', "art/femaleElfBlonde.png")  # Replace with your default image path
             saved_image = PhotoImage(file=saved_image_path)
             saved_image = saved_image.subsample(4, 4)  # Resize the image
             portrait_label.configure(image=saved_image)
