@@ -4,7 +4,7 @@ import openai
 import Config
 
 class SimpleSessionManager:
-    SOME_LIMIT = 500
+    SOME_LIMIT = 700
     openai.api_key = Config.API_KEY
     def __init__(self):
         self.session_data = None
@@ -53,22 +53,18 @@ class SimpleSessionManager:
         return total_tokens
 
     def add_milestone(self):
-        last_10_messages = self.session_data['messages'][-10:]  # Grab the last 10 messages
+        last_15_messages = self.session_data['messages'][-15:]  # Grab the last 15 messages
         latest_summary = [msg for msg in reversed(self.session_data['system_messages']) if msg['content'].startswith('Characters Summary:')]
     
         if latest_summary:
-            last_10_messages.append(latest_summary[0])
+            last_15_messages.append(latest_summary[0])
             # Ensure this latest_summary message also exists in 'messages'
             if latest_summary[0] not in self.session_data['messages']:
                 self.session_data['messages'].append(latest_summary[0])
         
-        self.session_data['last_milestone'] = last_10_messages  # Store them as a milestone
+        self.session_data['last_milestone'] = last_15_messages  # Store them as a milestone
     
-        # Update your assertions here to ensure that 'last_milestone' is consistent with 'messages'
-        #if len(self.session_data['messages']) >= 10:
-            #assert set(self.session_data['last_milestone']).issubset(set(self.session_data['messages'][-10:]))
-    
-        self.last_milestone_index = len(self.session_data['messages']) - 10  # Update the index
+        self.last_milestone_index = len(self.session_data['messages']) - 15  # Update the index
         self.save_session()
 
     def get_messages_since_last_milestone(self):
@@ -98,11 +94,6 @@ class SimpleSessionManager:
 
         self.save_session()
         print("Debug: Session saved.")  # Debug statement 5
-        
-        #if len(self.session_data['messages']) >= 10:
-            #assert self.session_data['last_milestone'] == self.session_data['messages'][-10:]
-
-        #assert self.session_data['last_milestone'] == self.session_data['messages'][-10:]
 
     def add_system_message(self, message):
         self.session_data['system_messages'].append(message)
@@ -120,13 +111,6 @@ class SimpleSessionManager:
         self.session_data = None
 
     def save_session(self):
-        #print("Debug: self.session_data['last_milestone']:", self.session_data['last_milestone'])
-        #print("Debug: self.session_data['messages'][-10:]:", self.session_data['messages'][-10:])
-        
-        #if len(self.session_data['messages']) >= 10:
-            #assert self.session_data['last_milestone'] == self.session_data['messages'][-10:]
-
-        #assert self.session_data['last_milestone'] == self.session_data['messages'][-10:]
 
         with open('session_data.json', 'w') as file:
             json.dump(self.session_data, file, indent=4)
@@ -173,7 +157,7 @@ class SimpleSessionManager:
                             "content": f"Please summarize the following conversation: {prompt}"
                         }
                     ],
-                    max_tokens=50  # Limit the response to 100 tokens
+                    max_tokens=100  # Limit the response to 100 tokens
                 )
                 # Extract the generated summary text from the API response
                 summary_text = chat.choices[0].message['content'].strip()

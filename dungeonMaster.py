@@ -25,13 +25,23 @@ engine = pyttsx3.init()
 window = tk.Tk()
 window.title("Gauntlets and Goblins")
 
+# Function to define custom font and colors
+def define_custom_font_and_colors():
+    custom_font = tkFont.Font(family="Helvetica", size=12)
+    bg_color = '#2E2E2E'
+    fg_color = '#FFFFFF'
+    return custom_font, bg_color, fg_color
+
+# Call the function to get the values
+custom_font, bg_color, fg_color = define_custom_font_and_colors()
+
 # Explicitly set the Tkinter window size
 window_width = 900  # You can set this to any value you want
 window_height = 700  # You can set this to any value you want
 window.geometry(f"{window_width}x{window_height}")
 
 # Load the startup graphic
-startup_image = PhotoImage(file="ggTitle.png")
+startup_image = PhotoImage(file="art/ggTitle.png")
 
 # Calculate aspect ratios
 window_aspect = window_width / window_height
@@ -56,7 +66,8 @@ startup_label.place(x=0, y=0, relwidth=1, relheight=1)  # Cover the whole window
 window.minsize(800, 600)
 
 # Set background color to a dark gray to resemble dungeon tiles
-window.configure(bg='#2E2E2E')
+#window.configure(bg='#2E2E2E')
+window.configure(bg=bg_color)
 
 # Define a custom font
 custom_font = tkFont.Font(family="Helvetica", size=12)
