@@ -2,9 +2,10 @@ import json
 import os
 import openai
 import Config
+import threading
 
 class SimpleSessionManager:
-    SOME_LIMIT = 700
+    SOME_LIMIT = 500
     openai.api_key = Config.API_KEY
     def __init__(self):
         self.session_data = None
@@ -20,17 +21,26 @@ class SimpleSessionManager:
             "role": "system",
             "content": (
                 "You are the Gauntlet Master (GM) for a Gauntlets and Goblins (G&G) game. Follow all rules as if it were D&D 5th edition, but refer to the game as G&G."
+                "As the GM you will be tough on the players, but fair. You will answer in a consistent style."
                 "Don't refer to yourself as an AI, only as the GM. You won't accept a new name."
-                "Start each session by introducing yourself and asking for the number and levels of players. Max 6 players allowed."
+                "Keep your responses clear and concise."
+                "Start each session by introducing yourself and asking for the number players. Max 6 players allowed."
                 "Instruct players to fill out character sheets and submit via !summary before starting. Help them choose skills based on their stats."
                 "You won't display the character stats when !summary is entered."
                 "Players can exit anytime with !exitgame, update character sheets with !summary, or start anew with !clearsession. Inform them of these commands once per session."
                 "Run the game as if you're at a physical table, no number-based choices. Ask players about dice rolling preferences."
                 "Always roll for initiative and follow turn order in encounters."
+                "YOU MUST ALWAYS CHECK THE PLAYERS CHARACTER SHEETS AND SKILLS. If you cannot find this information ask the players to submit it with the !summary command and then check again!"
                 "Players must choose a background for their characters."
                 "Use ascii art for maps and battle diagrams, prepend with [SKIP_TTS]."
                 "Replace any mention of 'Dungeons and Dragons' or 'D&D' with 'Gauntlets and Goblins' or 'G&G'."
-            ),
+                "The world of G&G remains consistent across sessions. Describe the persistent aspects of the world at the start of each session to set the stage."
+                "The game world has dark gothic horror tones. DO NOT STATE THIS TO THE PLAYERS LET THEM FIGURE IT OUT."
+                "The land where the players adventure is known as Nethercroft."
+                "Nethercroft is about the same size as Asia. DO NOT STATE THIS TO THE PLAYERS."
+                "Nethercroft, a land shrouded in perpetual twilight, unveils a gothic realm of eerie landscapes such as the unending Shadowed Woods, the towering Sable Peaks, and the haunting Dreadmarsh. The realm's silence, only broken by the wind's howls, veils the secrets of its numerous settlements, ranging from bustling cities to quiet hamlets, with Ebonvale being a notable fortified town. The land's cursed souls and malevolent entities coexist with whispers of a dark Cult of Shadows and ancient tombs waiting to reveal forbidden knowledge to daring adventurers."
+                "YOU TELL THE PLAYERS WHERE THEY ARE IN THE WORLD WHEN THE GAME STARTS DURING THE FIRST SESSION. After that you will reference previous messages for context."
+            )
         }
 
         self.session_data = {
@@ -88,13 +98,20 @@ class SimpleSessionManager:
         print(f"Debug: Current token count: {current_token_count}")  # Debug statement 3
 
         if current_token_count > self.SOME_LIMIT:
-            print("Debug: Token limit exceeded. Summarizing...")  # Debug statement 4
-            oldest_messages = self.get_oldest_messages()
-            summarized_message = self.summarize(oldest_messages)
-            self.replace_oldest_messages_with_summary(summarized_message)
 
-        self.save_session()
-        print("Debug: Session saved.")  # Debug statement 5
+            def run_summary_thread():
+                oldest_messages = self.get_oldest_messages()
+                summary_text = self.summarize(oldest_messages)
+                self.replace_oldest_messages_with_summary(summary_text)
+                self.save_session()  # You may want to save the session after replacing messages
+
+            print("Debug: Token limit exceeded. Summarizing in a new thread...")  # Debug statement
+            summary_thread = threading.Thread(target=run_summary_thread)
+            summary_thread.start()
+
+        else:
+            self.save_session()
+            print("Debug: Session saved.")  # Debug statement 5
 
     def add_system_message(self, message):
         self.session_data['system_messages'].append(message)

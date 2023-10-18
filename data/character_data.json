@@ -1,17 +1,17 @@
 {
     "0": {
-        "Name": "Cade",
-        "Race": "Elf",
-        "Class": "Rogue",
+        "Name": "cade",
+        "Race": "",
+        "Class": "",
         "Level": "1",
-        "AC": "13",
-        "HP": "10",
-        "Strength": "12",
-        "Dexterity": "15",
-        "Constitution": "14",
-        "Intelligence": "14",
-        "Wisdom": "15",
-        "Charisma": "13",
+        "AC": "1",
+        "HP": "1",
+        "Strength": "1",
+        "Dexterity": "1",
+        "Constitution": "1",
+        "Intelligence": "1",
+        "Wisdom": "1",
+        "Charisma": "1",
         "Skills": {
             "Acrobatics (Dex)": "4",
             "Animal Handling (Wis)": "",
@@ -32,15 +32,15 @@
             "Stealth (Dex)": "4",
             "Survival (Wis)": "2"
         },
-        "Notes": "2 short swords\nBurglars pack\nLeather armor\nTwo daggers\nThieves tools\nSmall knife\nMap of the city I grew up in\nMap of Waterdeep from guard\nPet rat\nToken of my parents\nCommon clothes\nwell-made lock picks\n20gp\n250exp\n\nBackgroun: Urchin\nLanguages: Common, Elvish\n\n**NOTES**\nEdge of dock ward.\nold Hillock trail\n\nPlaces I've been:\nWaterdeep\nMorset (Weeks journey east of Waterdeep)",
-        "Image": "art/femaleElfBlonde.png",
+        "Notes": "Notes:\nI am in Avantia and elves are rare here.\nHaunted forest near Avantia.\n\nBranor is the leader of traders I met.\nAvantia is known for its mysteries.\n\nIona, a woman with striking silver hair and a hawk perched on her shoulder.\n\n\"No, wait,\" Iona interrupts, her large eyes grown distant in thought. \"I have heard of Nethercroft. It's not a name for this world, Cade, it's a name of a different place entirely, far from Avantia. It\u2019s a whole different realm by itself. The tales say it's a place of much darker machinations. But...\" She gives you a careful look, \"It's just a name from old tales and legends, nothing more.",
+        "Image": "C:/Users/ryanc/Pictures/Gauntlets_and_Goblins/Screenshot 2023-10-15 160128.png",
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
     "1": {
-        "Name": "Cheba",
-        "Race": "Human",
-        "Class": "Cleric",
-        "Level": "1",
+        "Name": "",
+        "Race": "",
+        "Class": "",
+        "Level": "11",
         "AC": "16",
         "HP": "10",
         "Strength": "13",
@@ -69,15 +69,15 @@
             "Stealth (Dex)": "",
             "Survival (Wis)": ""
         },
-        "Notes": "Warhammer\nChain mail\nLight crossbow\n20 bolts\nPriests pack\nShield\nHoly symbol\nPrayer book\n5 sticks of incense\nVestments\nCommon clothes\nSmall iron key\nSmall jeweled brooch\n45gp\n325exp\n\nBackground: Acolyte\nLanguages: Common, Elvish, Celestial\nSpells:\nCantrips(at will): \n1. Light \n2. Sacred Flame \n3. Thaumaturgy \n\n1st level spells: \n1. Cure Wounds \n2. Guiding Bolt \n3. Sanctuary",
-        "Image": "art/femaleElfBlonde.png",
+        "Notes": "",
+        "Image": "C:/Users/ryanc/Pictures/Gauntlets_and_Goblins/Screenshot 2023-10-15 153924.png",
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
     "2": {
         "Name": "Cid",
         "Race": "Human",
         "Class": "Bard",
-        "Level": "1",
+        "Level": "11",
         "AC": "10",
         "HP": "10",
         "Strength": "12",
@@ -106,7 +106,7 @@
             "Stealth (Dex)": "5",
             "Survival (Wis)": ""
         },
-        "Notes": "Notes:\nRapier\nLute\nLeather armor\n200exp",
+        "Notes": "",
         "Image": "art/femaleElfBlonde.png",
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
@@ -144,6 +144,7 @@
             "Survival (Wis)": ""
         },
         "Notes": "Notes:",
-        "Image": "art/femaleElfBlonde.png"
+        "Image": "art/femaleElfBlonde.png",
+        "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     }
 }

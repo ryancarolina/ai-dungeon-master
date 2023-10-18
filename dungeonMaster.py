@@ -63,7 +63,7 @@ def handle_entry_logic(user_text):
 
         if relevant_messages:
             try:
-                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages)
+                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages, max_tokens=100)
                 dm_response = chat.choices[0].message.content
                 if "_____________________" in dm_response:  # or any other identifier for ASCII art
                     dm_response = "[SKIP_TTS]" + dm_response

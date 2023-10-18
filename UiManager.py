@@ -54,8 +54,6 @@ class UiManager:
         self.text_area.tag_config('player_tag', foreground='green')
         self.text_area.tag_config('dm_tag', foreground='yellow')
 
-        # ... Other initialization code ...
-
     # Define custom font and colors
     def define_custom_font_and_colors(self):
         custom_font = tkFont.Font(family="Helvetica", size=12)
@@ -81,9 +79,7 @@ class UiManager:
         print(f"User Text: {user_text}")  # Debugging line
         self.input_field.delete("1.0", tk.END)
         callback(user_text)
-
-
-        
+  
     def add_character_buttons(self, num_buttons, callback):
         for i in range(num_buttons):
             button = tk.Button(self.window, text=f"P {i + 1} Character", command=lambda i=i: callback(i), bg=self.bg_color, fg=self.fg_color, font=self.custom_font)
