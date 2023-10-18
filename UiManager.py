@@ -38,7 +38,7 @@ class UiManager:
         self.scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
         # Create a multi-line text input field
-        self.input_field = tk.Text(self.window, width=40, height=4, bg=self.bg_color, fg=self.fg_color, font=self.custom_font)
+        self.input_field = tk.Text(self.window, wrap=tk.WORD, width=100, height=4, bg=self.bg_color, fg=self.fg_color, font=self.custom_font)
         self.input_field.grid(column=0, row=1, padx=10, pady=10, sticky='w')
         
         # Bind the Enter key to handle_entry method
@@ -53,6 +53,7 @@ class UiManager:
         # Define text tags for coloring
         self.text_area.tag_config('player_tag', foreground='green')
         self.text_area.tag_config('dm_tag', foreground='yellow')
+        self.text_area.tag_config('sys_tag', foregroun='orange')
 
     # Define custom font and colors
     def define_custom_font_and_colors(self):
@@ -82,11 +83,15 @@ class UiManager:
   
     def add_character_buttons(self, num_buttons, callback):
         for i in range(num_buttons):
-            button = tk.Button(self.window, text=f"P {i + 1} Character", command=lambda i=i: callback(i), bg=self.bg_color, fg=self.fg_color, font=self.custom_font)
+            button = tk.Button(self.window, text=f"P {i + 1}", command=lambda i=i: callback(i), bg=self.bg_color, fg=self.fg_color, font=self.custom_font)
             button.grid(column=0, row=i + 3, padx=10, pady=10, sticky='w')
             
     def display_dm_message(self, message, tag='dm_tag'):
         self.text_area.insert(tk.END, "GM: ", tag)
+        self.text_area.insert(tk.END, f"{message}\n\n")
+        
+    def display_sys_message(self, message, tag='sys_tag'):
+        self.text_area.insert(tk.END, "System: ", tag)
         self.text_area.insert(tk.END, f"{message}\n\n")
         
     def add_character_buttons_and_configure_grid(self, num_buttons, callback):
@@ -94,7 +99,7 @@ class UiManager:
         self.add_character_buttons(num_buttons, callback)
 
         # Set weight and minimum size for rows and columns
-        self.window.grid_rowconfigure(0, weight=1, minsize=200)  # Text frame
+        self.window.grid_rowconfigure(0, weight=1, minsize=400)  # Text frame
         self.window.grid_rowconfigure(1, weight=0, minsize=100)  # Input field
         self.window.grid_rowconfigure(2, weight=0, minsize=50)  # Submit button
 

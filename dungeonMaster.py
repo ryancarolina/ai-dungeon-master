@@ -37,7 +37,7 @@ def handle_entry_logic(user_text):
         simple_session_manager.start_session()
         simple_session_manager.add_milestone()
     
-    if user_text == '!clearsession':
+    if user_text == '/clearsession':
         simple_session_manager.clear_session()
         simple_session_manager.start_session()  # Start a new session immediately
         acknowledgment = "Session cleared. New session started."
@@ -47,7 +47,7 @@ def handle_entry_logic(user_text):
     # Add the user's message to the session data
     simple_session_manager.add_message({"role": "user", "content": user_text})
 
-    if user_text == '!summary':
+    if user_text == '/summary':
         summary_data = character_manager.get_summary_data()
         formatted_summary = f"Characters Summary: {summary_data}"
         simple_session_manager.add_system_message({"role": "system", "content": formatted_summary})
@@ -57,16 +57,16 @@ def handle_entry_logic(user_text):
         acknowledgment = "Summary data updated."
         ui_manager.display_dm_message(acknowledgment)
         return  # Exit early as no further processing is needed
+               
     else:
+        
         # Get only the relevant messages since the last milestone
         relevant_messages = simple_session_manager.get_messages_since_last_milestone()
 
         if relevant_messages:
             try:
-                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages, max_tokens=100)
+                chat = openai.ChatCompletion.create(model="gpt-4", messages=relevant_messages, max_tokens=350)
                 dm_response = chat.choices[0].message.content
-                if "_____________________" in dm_response:  # or any other identifier for ASCII art
-                    dm_response = "[SKIP_TTS]" + dm_response
                 simple_session_manager.add_message({"role": "assistant", "content": dm_response})
                 ui_manager.display_dm_message(dm_response)
                 ui_manager.text_area.see(tk.END)
@@ -81,8 +81,6 @@ def speak():
         text = speech_queue.get()  # Get text from the queue
         if text == "STOP":
             break  # Exit the loop if the text is "STOP"
-        if text.startswith("[SKIP_TTS]"):
-            continue  # Skip this iteration, don't read this text
         engine.say(text)
         engine.runAndWait()
         
@@ -90,8 +88,11 @@ speech_thread = threading.Thread(target=speak)
 speech_thread.start()
 
 ui_manager = UiManager(window, handle_entry_logic)
+# One time message
+ui_manager.display_sys_message("Welcome to Gauntlets and Goblins!")
 
-ui_manager.initialize_window(900, 700)
+# width hight
+ui_manager.initialize_window(900, 1000)
 
 ui_manager.add_character_buttons_and_configure_grid(6, character_manager.create_or_open_character_sheet)
 

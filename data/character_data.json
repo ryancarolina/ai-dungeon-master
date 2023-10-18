@@ -1,17 +1,17 @@
 {
     "0": {
-        "Name": "cade",
-        "Race": "",
-        "Class": "",
+        "Name": "Cade",
+        "Race": "Elf",
+        "Class": "Rogue",
         "Level": "1",
-        "AC": "1",
-        "HP": "1",
-        "Strength": "1",
-        "Dexterity": "1",
-        "Constitution": "1",
-        "Intelligence": "1",
-        "Wisdom": "1",
-        "Charisma": "1",
+        "AC": "13",
+        "HP": "6",
+        "Strength": "9",
+        "Dexterity": "15",
+        "Constitution": "14",
+        "Intelligence": "10",
+        "Wisdom": "12",
+        "Charisma": "12",
         "Skills": {
             "Acrobatics (Dex)": "4",
             "Animal Handling (Wis)": "",
@@ -32,8 +32,8 @@
             "Stealth (Dex)": "4",
             "Survival (Wis)": "2"
         },
-        "Notes": "Notes:\nI am in Avantia and elves are rare here.\nHaunted forest near Avantia.\n\nBranor is the leader of traders I met.\nAvantia is known for its mysteries.\n\nIona, a woman with striking silver hair and a hawk perched on her shoulder.\n\n\"No, wait,\" Iona interrupts, her large eyes grown distant in thought. \"I have heard of Nethercroft. It's not a name for this world, Cade, it's a name of a different place entirely, far from Avantia. It\u2019s a whole different realm by itself. The tales say it's a place of much darker machinations. But...\" She gives you a careful look, \"It's just a name from old tales and legends, nothing more.",
-        "Image": "C:/Users/ryanc/Pictures/Gauntlets_and_Goblins/Screenshot 2023-10-15 160128.png",
+        "Notes": "Notes:\n\nGold: 25\n\nFloor: 1\n\nHP MAX: 10\n\nEquipment: Leather armor, rapier, two\ndaggers, thieves tools, dark common\nclothes with a hood. Crowbar.\nMagic Harp.\n\nBackgroun: Criminal.",
+        "Image": "C:/Users/ryanc/Pictures/Gauntlets_and_Goblins/Screenshot 2023-10-15 160022.png",
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
     "1": {
@@ -74,9 +74,9 @@
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
     "2": {
-        "Name": "Cid",
-        "Race": "Human",
-        "Class": "Bard",
+        "Name": "",
+        "Race": "",
+        "Class": "",
         "Level": "11",
         "AC": "10",
         "HP": "10",
@@ -111,9 +111,9 @@
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     },
     "3": {
-        "Name": "Sasha",
-        "Race": "Elf",
-        "Class": "Bar Maid",
+        "Name": "",
+        "Race": "",
+        "Class": "",
         "Level": "1",
         "AC": "1",
         "HP": "1",
@@ -143,7 +143,7 @@
             "Stealth (Dex)": "",
             "Survival (Wis)": ""
         },
-        "Notes": "Notes:",
+        "Notes": "",
         "Image": "art/femaleElfBlonde.png",
         "Inventory": "{\"Weapons\": {}, \"Armor\": {}, \"Items\": {}, \"Currency\": {}}"
     }
