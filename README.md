@@ -6,10 +6,18 @@ Gauntlets and Goblins is an interactive text-based role-playing game with a grap
 
 - Text-based role-playing game with AI-driven responses
 - Character management system
-- Session management to track game progress
+- Advanced session management to track game progress
 - Graphical user interface built with Tkinter
 - Text-to-speech functionality for game responses
 - Special commands for session management and character summaries
+
+### Session Management System
+
+- Persistent session storage using JSON files
+- Milestone system for managing conversation context
+- Token management to control conversation size
+- Automatic summarization of older messages using GPT-3.5-turbo
+- Separate handling of system messages and character summaries
 
 ## Requirements
 
@@ -19,6 +27,9 @@ Gauntlets and Goblins is an interactive text-based role-playing game with a grap
   - openai
   - tkinter
   - pyttsx3
+  - json
+  - os
+  - threading
 
 ## Installation
 
@@ -55,10 +66,17 @@ python main.py
 - `/clearsession`: Clears the current session and starts a new one
 - `/summary`: Displays a summary of the current characters
 
+## Game World
+
+- The game is set in Nethercroft, an underground labyrinth with 100 floors
+- Players start in the town of Ebonvale on the first floor
+- Each floor has increasingly difficult monsters and a floor boss
+- The game world has dark gothic horror tones
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Disclaimer
 
-This project uses OpenAI's GPT-4 model and requires an API key. Please ensure you comply with OpenAI's use-case policy and terms of service.
+This project uses OpenAI's GPT-4 and GPT-3.5-turbo models and requires an API key. Please ensure you comply with OpenAI's use-case policy and terms of service.
