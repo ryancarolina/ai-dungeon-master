@@ -59,10 +59,6 @@ python main.py
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-[Add your chosen license here]
-
 ## Disclaimer
 
 This project uses OpenAI's GPT-4 model and requires an API key. Please ensure you comply with OpenAI's use-case policy and terms of service.
